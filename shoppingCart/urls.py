@@ -6,10 +6,9 @@ from shoppingCart import views
 
 router = DefaultRouter()
 
-router.register('MySabad' , views.SabadKharid)
+router.register('MyShoppingCart' , views.MyCart , basename = 'MyShoppingCart')
 router.register('MyOrders' , views.MyOrders , basename = 'MyOrders')
 
 urlpatterns = [
-    path('finance' , include(router.urls)),
-    path('sabadddd' , views.SabadKharid.as_view({'get' : 'list' , 'post' : 'create'}))
+    path('finance/' , include(router.urls)),
 ]

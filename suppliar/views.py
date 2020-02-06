@@ -9,7 +9,7 @@ import shoppingCart
 
 class Admin_Ordered(ModelViewSet):
 
-    # permission_classes = [IsAdminUser]
+    permission_classes = [IsAdminUser]
     queryset = shoppingCart.models.Shopping_Cart.objects.filter(status = 'payed')
 
     def get_serializer_class(self):

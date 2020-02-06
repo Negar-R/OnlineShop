@@ -10,15 +10,15 @@ import suppliar
 # Create your views here.
 
 
-class SabadKharid(ModelViewSet):
+class MyCart(ModelViewSet):
 
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = models.Shopping_Cart.objects.all()
     serializer_class = serializers.ShoppingCartSerializer
 
 class MyOrders(ModelViewSet):
 
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         print("***********" , self.request.user)
