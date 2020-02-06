@@ -1,0 +1,58 @@
+from rest_framework import serializers
+from rest_framework.response import Response
+
+import content
+from .models import Shopping_Cart
+
+class ShoppingCartSerializer(serializers.Serializer):
+
+    user = serializers.HiddenField(default = serializers.CurrentUserDefault())
+    item = serializers.PrimaryKeyRelatedField(queryset = content.models.BaseItem.objects.all())
+    quantity = serializers.IntegerField()
+
+    def create(self , validated_data):
+
+        user = self.context['request'].user
+        item = validated_data['item']
+        quantity = validated_data['quantity']
+
+        if item.quantity >= quantity:
+            user_good = Shopping_Cart.objects.filter(user = user , item = item , status = 'on_cart')
+            if len(user_good) == 0:
+                user_good = Shopping_Cart.objects.create(user = user , item = item ,  quantity = quantity , status = 'on_cart')
+                # item.quantity -= quantity
+                user_good.save()
+                # item.save()
+
+            else:
+                user_good = user_good[0]
+                user_good.quantity += quantity
+                user_good.save()
+
+            return user_good
+
+        else:
+            raise serializers.ValidationError("There isn't sufficient quantity for this item")
+
+class ItemDetail(serializers.ModelSerializer):
+
+    class Meta:
+        model = content.models.BaseItem
+        fields = ('name' , 'brand' , 'category' , 'price')
+
+
+class ItemInOrder(serializers.ModelSerializer):
+
+    item = ItemDetail(many = False)
+    class Meta:
+        model = Shopping_Cart
+        fields = ('item' , 'quantity')
+
+
+class Confirmation(serializers.Serializer):
+
+    state_choices = (
+        ('accept' , "I accept it , go to payment state") ,
+        ('reject' , "I reject it , I want to change something")
+    )
+    Final_state = serializers.ChoiceField(choices = state_choices)
