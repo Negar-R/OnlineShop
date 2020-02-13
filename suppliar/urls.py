@@ -5,7 +5,8 @@ from rest_framework.routers import DefaultRouter
 from suppliar import views
 
 router = DefaultRouter()
-router.register('Factors' , views.Admin_Ordered)
+router.register('old' , views.Admin_Ordered)
+router.register('Factors' , views.Factor)
 
 urlpatterns = [
     path('suppliar/' , include(router.urls))

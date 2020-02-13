@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 import userProfile
 import shoppingCart
-# from .models import Suppliar_Check_Order
+from .models import Suppliar_Check_Order
 
 class ProfileDetail(serializers.ModelSerializer):
     class Meta:
@@ -40,10 +40,10 @@ class SuppliarSerializer(serializers.ModelSerializer):
         model = shoppingCart.models.Shopping_Cart
         fields = ('user' , 'item' , 'quantity' , 'status')
 
-# class Suppliar_Factor(serializers.ModelSerializer):
+class Suppliar_Factor(serializers.ModelSerializer):
 
-#     reciever = ProfileDetail()
+    reciever = ProfileDetail()
     
-#     class Meta:
-#         model = Suppliar_Check_Order
-#         fields = ('reciever' , 'factor' , 'status')       
+    class Meta:
+        model = Suppliar_Check_Order
+        fields = ('reciever' , 'factor' , 'status')       

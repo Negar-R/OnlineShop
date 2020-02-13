@@ -22,3 +22,7 @@ class Shopping_Cart(models.Model):
     item = models.ForeignKey(content.models.BaseItem , on_delete = models.CASCADE , null = True)
     quantity = models.IntegerField()
     status = models.CharField(max_length = 10 , choices = status_choices , null = True)   
+
+    def __str__(self):
+        return self.item.name
+    
