@@ -10,8 +10,12 @@ router.register('Refrigerator' , ShowRefrigerators)
 router.register('TV' , ShowTelevisions)
 router.register('Laptob' , ShowLaptobs)
 router.register('Mobile' , ShowMobiles)
+router.register('Book' , ShowBooks)
+router.register('Stationery' , ShowStationeries)
+router.register('TopProducts' , ShowTopProducts)
+# router.register('NewestItems' , NewestItems)
 
 
 urlpatterns = [
-    path('menue' , include(router.urls)),
+    path('menu/' , include(router.urls)),
 ]

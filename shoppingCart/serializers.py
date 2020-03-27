@@ -8,7 +8,15 @@ class ShoppingCartSerializer(serializers.Serializer):
 
     user = serializers.HiddenField(default = serializers.CurrentUserDefault())
     item = serializers.PrimaryKeyRelatedField(queryset = content.models.BaseItem.objects.all())
+    item_name = serializers.SerializerMethodField('item_name_func')
     quantity = serializers.IntegerField()
+    sabad_id = serializers.SerializerMethodField('sabad_id_func')
+
+    def sabad_id_func(self , obj):
+        return obj.id
+
+    def item_name_func(self , obj):
+        return obj.item.name    
 
     def create(self , validated_data):
 
@@ -20,9 +28,7 @@ class ShoppingCartSerializer(serializers.Serializer):
             user_good = Shopping_Cart.objects.filter(user = user , item = item , status = 'on_cart')
             if len(user_good) == 0:
                 user_good = Shopping_Cart.objects.create(user = user , item = item ,  quantity = quantity , status = 'on_cart')
-                # item.quantity -= quantity
                 user_good.save()
-                # item.save()
 
             else:
                 user_good = user_good[0]
@@ -34,6 +40,16 @@ class ShoppingCartSerializer(serializers.Serializer):
         else:
             raise serializers.ValidationError("There isn't sufficient quantity for this item")
 
+    def update(self , instance , validated_data):
+
+        item = validated_data['item']
+        quantity = validated_data['quantity']
+
+        Shopping_Cart.objects.filter(pk = instance.id).update(item = item , quantity = quantity)
+
+        obj = Shopping_Cart.objects.get(pk = instance.id)
+        return obj     
+
 class ItemDetail(serializers.ModelSerializer):
 
     class Meta:
@@ -41,18 +57,44 @@ class ItemDetail(serializers.ModelSerializer):
         fields = ('name' , 'brand' , 'category' , 'price')
 
 
-class ItemInOrder(serializers.ModelSerializer):
+class ItemInOrderList(serializers.HyperlinkedModelSerializer):
 
+    detail = serializers.HyperlinkedIdentityField(
+        view_name = 'MyOrders-detail',
+    )
+    class Meta:
+        model = Shopping_Cart
+        fields = ('detail' , )
+
+class ItemInOrderDetail(serializers.ModelSerializer):
     item = ItemDetail(many = False)
     class Meta:
         model = Shopping_Cart
-        fields = ('item' , 'quantity')
-
+        fields = ('item' , 'quantity' , 'id')
 
 class Confirmation(serializers.Serializer):
 
     state_choices = (
-        ('accept' , "I accept it , go to payment state") ,
+        ('accept' , "I accept it , I want to pay for this item") ,
         ('reject' , "I reject it , I want to change something")
     )
-    Final_state = serializers.ChoiceField(choices = state_choices)
+    status = serializers.ChoiceField(choices = state_choices)
+
+class Go_To_Confirmation_Step(serializers.Serializer):
+    visit_choices = (('action' , 'I want to take an action'),)
+
+    state = serializers.ChoiceField(choices = visit_choices)
+
+class PayForItem(serializers.ModelSerializer):
+    item = ItemDetail(many = False)
+    class Meta:
+        model = Shopping_Cart
+        fields = ('item' , 'quantity')    
+
+class PayConfirmation(serializers.Serializer):
+
+    state_choices = (
+        ('accept' , "I accept it , Go to payment state") ,
+        ('reject' , "I reject it , I want to change something")
+    )
+    status = serializers.ChoiceField(choices = state_choices)

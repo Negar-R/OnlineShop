@@ -20,25 +20,24 @@ class ProfileDetail(serializers.ModelSerializer):
         model = userProfile.models.UserProfile
         fields = ('username' , 'email' , 'phone' , 'address')
 
+class FactorDetail(serializers.ModelSerializer):
 
-class UserDetail(serializers.ModelSerializer):
+    item = serializers.SerializerMethodField()
+    quantity = serializers.SerializerMethodField()
+    status = serializers.SerializerMethodField()
 
-    # profile = ProfileDetail(many = False)
+    def get_item(self , shopping_cart):
+        return shopping_cart.item.name
+
+    def get_quantity(self , shopping_cart):
+        return shopping_cart.quantity    
+
+    def get_status(self , shopping_cart):
+        return shopping_cart.status    
 
     class Meta:
-        model = User
-        fields = ('username', 'email')
-
-# class FactorDetail(serializers.ModelSerializer):
-
-#     item_name = serializers.SerializerMethodField()
-
-#     def get_item_name(self , item):
-#         return item.name
-
-#     class Meta:
-#         model = shoppingCart.models.Shopping_Cart
-#         fields = ('item_name' , 'status')
+        model = shoppingCart.models.Shopping_Cart
+        fields = ('item' , 'quantity' , 'status')
 
 class CheckOrdersDetail(serializers.Serializer):
 
@@ -48,25 +47,11 @@ class CheckOrdersDetail(serializers.Serializer):
     )
     status = serializers.ChoiceField(choices = statue_choices)
 
-
-class SuppliarSerializer(serializers.ModelSerializer):
-    
-    user = UserDetail(many = False)
-    item = shoppingCart.serializers.ItemDetail(many = False)
-
-    class Meta:
-        model = shoppingCart.models.Shopping_Cart
-        fields = ('user' , 'item' , 'quantity' , 'status')
-
 class Suppliar_Factor(serializers.ModelSerializer):
 
     reciever = ProfileDetail()
-    # factor = FactorDetail()
-    # factor_detail = serializers.SerializerMethodField()
-
-    # def get_factor_detail(self , suppliar_check_order):
-    #     return str(suppliar_check_order.factor.item)
+    factor = FactorDetail()
     
     class Meta:
         model = Suppliar_Check_Order
-        fields = ('reciever' , 'factor' , 'status')       
+        fields = ('reciever' , 'factor')       

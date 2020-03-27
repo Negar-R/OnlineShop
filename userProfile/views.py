@@ -50,3 +50,4 @@ class UserSignupApiView(APIView):
 
 class UserLoginApiView(ObtainAuthToken):
     renderer_classes = api_settings.DEFAULT_RENDERER_CLASSES
+    # pass

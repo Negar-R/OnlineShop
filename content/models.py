@@ -6,10 +6,12 @@ class BaseItem(models.Model):
 
     name = models.CharField(max_length = 200)
     brand = models.CharField(max_length = 100)
+    image = models.ImageField(upload_to = "ItemsPic" , null = True , blank = True)
     category = models.CharField(max_length = 100 , default = '')
     description = models.TextField()
     price = models.IntegerField()
     quantity = models.IntegerField()
+    created_date = models.DateField(null = True , blank = True)
 
     def __str__(self):
         return self.name
@@ -26,6 +28,9 @@ class DigitalProduct(BaseItem):
     color = models.CharField(max_length = 100)
     ram_Gig = models.SmallIntegerField()
 
+class Educational(BaseItem):
+
+    recommendede_ages = models.CharField(max_length = 200)
 
 class Refrigerator(HomeAppliance):
     
@@ -36,8 +41,6 @@ class Refrigerator(HomeAppliance):
     def __str__(self):
         return self.name
     
-
-
 class Television(HomeAppliance):
 
     resolution = models.CharField(max_length = 100)
@@ -76,10 +79,40 @@ class Mobile(DigitalProduct):
     def __str__(self):
         return self.name
 
+class Book(Educational):
 
+    language_choice = (('persian' , 'persian') ,
+                        ('english' , 'englih'))
+
+    author = models.CharField(max_length = 200)
+    publisher = models.CharField(max_length = 200)
+    language = models.CharField(max_length = 50 , choices = language_choice)
     
+    def __str__(self):
+        return self.name
 
+class Stationery(Educational):
 
+    kind_choice = (('pen' , 'pen') ,
+                    ('pencil' , 'pencil') ,
+                    ('Ravan_nevis' , 'Ravan_nevis'))
+    nib_choice = (('flat' , 'flat') ,
+                    ('ballbearings' , 'ballbearings'))
+    
+    color = models.CharField(max_length = 100)
+    kind = models.CharField(max_length = 50 , choices = kind_choice) # medad , khodkar , ravan_nevis
+    nib = models.CharField(max_length = 50 , choices = nib_choice) # anvae nok
+    
+    def __str__(self):
+        return self.name
 
+class TopProduct(BaseItem):
 
+    def __str__(self):
+        return self.name
 
+class AmazingOffer(BaseItem):
+
+    def __str__(self):
+        return self.name
+            

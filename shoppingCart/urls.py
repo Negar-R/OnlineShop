@@ -8,6 +8,7 @@ router = DefaultRouter()
 
 router.register('MyShoppingCart' , views.MyCart , basename = 'MyShoppingCart')
 router.register('MyOrders' , views.MyOrders , basename = 'MyOrders')
+router.register('Payment' , views.Payment , basename = 'Payment')
 
 urlpatterns = [
     path('finance/' , include(router.urls)),

@@ -13,5 +13,5 @@ class Suppliar_Check_Order(models.Model):
     )
 
     reciever = models.ForeignKey(userProfile.models.UserProfile , on_delete = models.CASCADE)
-    factor = models.ManyToManyField(shoppingCart.models.Shopping_Cart)
+    factor = models.ForeignKey(shoppingCart.models.Shopping_Cart , on_delete = models.CASCADE , null = True , blank = True)
     status = models.CharField(max_length = 50 , choices = status_choices)

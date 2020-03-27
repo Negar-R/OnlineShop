@@ -15,13 +15,13 @@ class Shopping_Cart(models.Model):
 
     status_choices = (
         ('on_cart' , 'on_cart') ,
-        ('payed' , 'payed')
+        ('ready_to_payed' , 'ready_to_payed')
     )
 
     user = models.ForeignKey(User , on_delete = models.CASCADE , null = True)
     item = models.ForeignKey(content.models.BaseItem , on_delete = models.CASCADE , null = True)
     quantity = models.IntegerField()
-    status = models.CharField(max_length = 10 , choices = status_choices , null = True)   
+    status = models.CharField(max_length = 100 , choices = status_choices , null = True)   
 
     def __str__(self):
         return self.item.name

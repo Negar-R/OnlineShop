@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer , HyperlinkedModelSerializer
 
-from .models import Refrigerator , Television , Laptob , Mobile
+from .models import Refrigerator , Television , Laptob , Mobile , Book , Stationery , TopProduct , AmazingOffer
 
 class RefrigeratorListSerializer(HyperlinkedModelSerializer):
     class Meta:
@@ -40,4 +40,44 @@ class MobileListSerializer(HyperlinkedModelSerializer):
 class MobileDetailSerilizer(ModelSerializer):
     class Meta:
         model = Mobile
+        fields = '__all__'
+
+class BookListSerializer(HyperlinkedModelSerializer):
+    class Meta:
+        model = Book
+        fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+
+class BookDetailSerilizer(ModelSerializer):
+    class Meta:
+        model = Book
+        fields = '__all__'
+
+class StationeryListSerializer(HyperlinkedModelSerializer):
+    class Meta:
+        model = Stationery
+        fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+
+class StationeryDetailSerilizer(ModelSerializer):
+    class Meta:
+        model = Stationery
+        fields = '__all__'
+
+class TopProductListSerializer(HyperlinkedModelSerializer):
+    class Meta:
+        model = TopProduct
+        fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+
+class TopProductDetailSerilizer(ModelSerializer):
+    class Meta:
+        model = TopProduct
+        fields = '__all__'
+
+class AmazingOfferListSerializer(HyperlinkedModelSerializer):
+    class Meta:
+        model = AmazingOffer
+        fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+
+class AmazingOfferDetailSerilizer(ModelSerializer):
+    class Meta:
+        model = AmazingOffer
         fields = '__all__'
