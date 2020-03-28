@@ -5,10 +5,14 @@ from django.utils.text import slugify
 
 class BaseItem(models.Model):
 
+    category_choice = (('Digital_Product' , 'Digital_Product') ,
+                        ('Home_Appliance' , 'Home_Appliance') ,
+                        ('Educational' , 'Educational'))
+
     name = models.CharField(max_length = 200)
     brand = models.CharField(max_length = 100)
     image = models.ImageField(upload_to = "ItemsPic" , null = True , blank = True)
-    category = models.CharField(max_length = 100 , default = '')
+    category = models.CharField(max_length = 100 , choices = category_choice)
     description = models.TextField()
     price = models.IntegerField()
     quantity = models.IntegerField()
@@ -20,13 +24,29 @@ class BaseItem(models.Model):
 
 class HomeAppliance(BaseItem):
 
-    color = models.CharField(max_length = 60 , null = True)
+    color_choice = (('black' , 'black') ,
+                    ('white' , 'white') ,
+                    ('silver' , 'silver') ,
+                    ('blue' , 'blue') ,
+                    ('red' , 'red') ,
+                    ('green' , 'green') ,
+                    ('yellow' , 'yellow'))
+
+    color = models.CharField(max_length = 60 , choices = color_choice , null = True)
     weight = models.SmallIntegerField(null = True , default = 0)
 
 
 class DigitalProduct(BaseItem):
+
+    color_choice = (('black' , 'black') ,
+                    ('white' , 'white') ,
+                    ('silver' , 'silver') ,
+                    ('blue' , 'blue') ,
+                    ('red' , 'red') ,
+                    ('green' , 'green') ,
+                    ('yellow' , 'yellow'))
     
-    color = models.CharField(max_length = 100)
+    color = models.CharField(max_length = 100 , choices = color_choice)
     ram_Gig = models.SmallIntegerField()
 
 class Educational(BaseItem):
@@ -99,8 +119,15 @@ class Stationery(Educational):
                     ('Ravan_nevis' , 'Ravan_nevis'))
     nib_choice = (('flat' , 'flat') ,
                     ('ballbearings' , 'ballbearings'))
+    color_choice = (('black' , 'black') ,
+                    ('white' , 'white') ,
+                    ('silver' , 'silver') ,
+                    ('blue' , 'blue') ,
+                    ('red' , 'red') ,
+                    ('green' , 'green') ,
+                    ('yellow' , 'yellow'))                
     
-    color = models.CharField(max_length = 100)
+    color = models.CharField(max_length = 100 , choices = color_choice)
     kind = models.CharField(max_length = 50 , choices = kind_choice) # medad , khodkar , ravan_nevis
     nib = models.CharField(max_length = 50 , choices = nib_choice) # anvae nok
     
