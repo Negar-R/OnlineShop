@@ -12,9 +12,8 @@ router.register('Laptob' , ShowLaptobs)
 router.register('Mobile' , ShowMobiles)
 router.register('Book' , ShowBooks)
 router.register('Stationery' , ShowStationeries)
-router.register('TopProducts' , ShowTopProducts)
-# router.register('NewestItems' , NewestItems)
-
+router.register('Top_Products' , ShowTopProducts)
+router.register('Amazing_Offers' , ShowAmazingOffers)
 
 urlpatterns = [
     path('menu/' , include(router.urls)),

@@ -25,16 +25,15 @@ class UserSignupApiView(APIView):
             username = serializer.validated_data.get('username')
             email = serializer.validated_data.get('email')
             phone = serializer.validated_data.get('phone')
-            address = serializer.validated_data.get('address')
             password = serializer.validated_data.get('password')
 
             try:
-                user = User.objects.create_user(username = username , email = email)
+                user = User.objects.create_user(username = username , email = email , phone = phone)
             except Exception as e:
                 return Response(str(e))
             else:
                 user.set_password(password)
-                profile = models.UserProfile.objects.create(user = user , phone = phone , address = address)
+                profile = models.UserProfile.objects.create(user = user)
                 token , _ = Token.objects.get_or_create(user = user)
                 user.save()    
 
@@ -50,4 +49,24 @@ class UserSignupApiView(APIView):
 
 class UserLoginApiView(ObtainAuthToken):
     renderer_classes = api_settings.DEFAULT_RENDERER_CLASSES
-    # pass
+
+
+class UpdateProfileView(APIView):
+
+    serializer_class = serializers.UpdateProfileSerializer
+
+    def post(self , request):
+        serializer = self.serializer_class(data = request.data)
+        
+        if serializer.is_valid():
+            address = serializer.validated_data.get('address')
+            try:
+                user_profile = models.UserProfile.objects.get(user = self.request.user)
+            except:
+                return Response({'message' : 'You should login first'})
+            else:    
+                user_info = models.UserInformation.objects.create(address = address)
+                user_profile.address.add(user_info)
+                user_profile.save()
+
+            return Response({'message' : 'This address has saved for you'})

@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer , HyperlinkedModelSerializer
+from rest_framework.serializers import ModelSerializer , HyperlinkedModelSerializer , SerializerMethodField
 
 from .models import Refrigerator , Television , Laptob , Mobile , Book , Stationery , TopProduct , AmazingOffer
 
@@ -62,22 +62,39 @@ class StationeryDetailSerilizer(ModelSerializer):
         model = Stationery
         fields = '__all__'
 
-class TopProductListSerializer(HyperlinkedModelSerializer):
+class TopProductSerializer(ModelSerializer):
+    product = SerializerMethodField()
+    price = SerializerMethodField()
+    # image = SerializerMethodField()
+
+    def get_product(self , topproduct):
+        return topproduct.product.name
+
+    def get_price(self , topproduct):
+        return topproduct.product.price
+
+    # def get_image(self , topproduct):
+    #     return topproduct.product.image    
+
     class Meta:
         model = TopProduct
-        fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+        fields = ('product' , 'price' , 'product_detail')
 
-class TopProductDetailSerilizer(ModelSerializer):
-    class Meta:
-        model = TopProduct
-        fields = '__all__'
+class AmazingOfferSerializer(ModelSerializer):
 
-class AmazingOfferListSerializer(HyperlinkedModelSerializer):
+    product = SerializerMethodField()
+    price = SerializerMethodField()
+    # image = SerializerMethodField()
+
+    def get_product(self , topproduct):
+        return topproduct.product.name
+
+    def get_price(self , topproduct):
+        return topproduct.product.price
+
+    # def get_image(self , topproduct):
+    #     return topproduct.product.image    
+
     class Meta:
         model = AmazingOffer
-        fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
-
-class AmazingOfferDetailSerilizer(ModelSerializer):
-    class Meta:
-        model = AmazingOffer
-        fields = '__all__'
+        fields = ('product' , 'price' , 'product_detail')

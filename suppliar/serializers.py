@@ -49,9 +49,18 @@ class CheckOrdersDetail(serializers.Serializer):
 
 class Suppliar_Factor(serializers.ModelSerializer):
 
-    reciever = ProfileDetail()
+    # reciever = ProfileDetail()
+    # address = AddressDetail()
+    username = serializers.SerializerMethodField()
+    email = serializers.SerializerMethodField()
     factor = FactorDetail()
-    
+
+    def get_username(self , suppliar):
+        return suppliar.reciever.username
+
+    def get_email(self , suppliar):
+        return suppliar.reciever.email 
+
     class Meta:
         model = Suppliar_Check_Order
-        fields = ('reciever' , 'factor')       
+        fields = ('username' , 'email' , 'phone' , 'address' , 'factor')       

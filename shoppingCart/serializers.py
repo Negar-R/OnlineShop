@@ -2,6 +2,7 @@ from rest_framework import serializers
 from rest_framework.response import Response
 
 import content
+import userProfile
 from .models import Shopping_Cart
 
 class ShoppingCartSerializer(serializers.Serializer):
@@ -84,6 +85,25 @@ class Go_To_Confirmation_Step(serializers.Serializer):
     visit_choices = (('action' , 'I want to take an action'),)
 
     state = serializers.ChoiceField(choices = visit_choices)
+
+class AddressFilteredPrimaryKeyRelatedField(serializers.PrimaryKeyRelatedField):
+    ''' Show addresses that user have '''
+
+    def get_queryset(self):
+        request = self.context.get('request', None)
+        queryset = super(AddressFilteredPrimaryKeyRelatedField , self).get_queryset()
+        if not request or not queryset:
+            return None
+        return queryset.filter(information = request.user.users)
+
+class ChooseAddressSerializer(serializers.Serializer):
+
+    state_choices = (
+        ('accept' , "I accept it , Go to payment state") ,
+        ('reject' , "I reject it , I want to change something")
+    )
+    status = serializers.ChoiceField(choices = state_choices)
+    address = AddressFilteredPrimaryKeyRelatedField(queryset = userProfile.models.UserInformation.objects)
 
 class PayForItem(serializers.ModelSerializer):
     item = ItemDetail(many = False)

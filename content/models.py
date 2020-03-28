@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -106,13 +107,19 @@ class Stationery(Educational):
     def __str__(self):
         return self.name
 
-class TopProduct(BaseItem):
+class TopProduct(models.Model):
+
+    product = models.ForeignKey(BaseItem , on_delete = models.CASCADE)
+    product_detail = models.URLField(max_length = 200)
 
     def __str__(self):
-        return self.name
+        return self.product.name
 
-class AmazingOffer(BaseItem):
+class AmazingOffer(models.Model):
+
+    product = models.ForeignKey(BaseItem , on_delete = models.CASCADE)
+    product_detail = models.URLField(max_length = 200)
 
     def __str__(self):
-        return self.name
+        return self.product.name
             

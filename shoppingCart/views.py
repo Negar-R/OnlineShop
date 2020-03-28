@@ -69,22 +69,24 @@ class Payment(ModelViewSet):
 
     serializers = {
         'list' : serializers.PayForItem ,
-        'create' : serializers.PayConfirmation
+        'create' : serializers.ChooseAddressSerializer,
     }    
 
     def create(self , request):
         if request.data['status'] == 'accept':
             ordered_item = models.Shopping_Cart.objects.filter(user = self.request.user , status = 'ready_to_payed')
             for ordered in ordered_item:
-                # ordered.status = 'payed'
+                ordered.status = ''
                 ordered.item.quantity -= ordered.quantity
                 ordered.item.save()
                 ordered.save()
                 profile = userProfile.models.UserProfile.objects.filter(user = self.request.user)
-                factors = suppliar.models.Suppliar_Check_Order.objects.create(reciever = profile[0])
-                factors.factor = ordered
-                factors.save()
+                addresses = userProfile.models.UserInformation.objects.filter(information = self.request.user.users)
+                address = addresses[int(self.request.data['address']) - 1]
+                factors = suppliar.models.Suppliar_Check_Order.objects.create(reciever = self.request.user , phone = profile[0].phone , address = address , factor = ordered)
             return Response({'message' : 'مشتری گرامی ، پرداخت شما با موفقیت انجام شد . به امید دیدار دوباره شما'})
+        else:
+            return Response({'message' : 'پرداخت شما لغو شد'})    
 
     def get_serializer_class(self):
         return self.serializers.get(self.action)

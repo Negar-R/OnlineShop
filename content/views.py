@@ -106,47 +106,10 @@ class ShowStationeries(ReadOnlyModelViewSet):
 
 class ShowTopProducts(ReadOnlyModelViewSet):
 
-    queryset = BaseItem.objects.all()
+    queryset = TopProduct.objects.all()
+    serializer_class = TopProductSerializer
 
-    # def retrieve(self, request, *args, **kwargs):
+class ShowAmazingOffers(ReadOnlyModelViewSet):
 
-    #     if instance.category == 'Digital Product':
-    #         new_instance = DigitalProduct.objects.get(name = instance.name)
-    #     elif instance.category == 'Home Appliance':
-    #         new_instance = HomeAppliance.objects.get(name = instance.name)
-    #     else:
-    #         new_instance = Educational.objects.get(name = instance.name)
-
-    #     serializer = self.get_serializer(new_instance)
-    #     return Response(serializer.data)
-
-    print("Before get_serializer")
-    def get_serializer_class(self):
-
-        if self.action == 'list':
-            # instance = self.get_object()
-            # if instance.category == 'Digital Product':
-            return MobileListSerializer
-        else:
-            return TelevisionListSerializer
-        return serializers.Default    
-        
-    print("After get_serializer")
-
-
-class NewestItems(ReadOnlyModelViewSet):
-
-    Now = datetime.now()
-    year = Now.strftime("%Y") 
-    year = int(year)
-    month = Now.strftime("%m") 
-    month = int(month)
-
-    month -= 6
-    if month < 1:
-        year -= 1
-        month = 12 + month
-
-    queryset = BaseItem.objects.filter(created_date = '2020-03-27') 
-    serializer_class = RefrigeratorListSerializer
-  
+    queryset = AmazingOffer.objects.all()
+    serializer_class = AmazingOfferSerializer
