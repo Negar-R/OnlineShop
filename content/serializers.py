@@ -1,6 +1,8 @@
 from rest_framework.serializers import ModelSerializer , HyperlinkedModelSerializer , SerializerMethodField
 
-from .models import Refrigerator , Television , Laptob , Mobile , Book , Stationery , TopProduct , AmazingOffer
+from .models import (Refrigerator , Television , Laptob , 
+                    Mobile , Book , Stationery , TopProduct , 
+                    AmazingOffer , BaseItem)
 
 class RefrigeratorListSerializer(HyperlinkedModelSerializer):
     class Meta:
@@ -84,17 +86,18 @@ class AmazingOfferSerializer(ModelSerializer):
 
     product = SerializerMethodField()
     price = SerializerMethodField()
-    # image = SerializerMethodField()
 
     def get_product(self , topproduct):
         return topproduct.product.name
 
     def get_price(self , topproduct):
-        return topproduct.product.price
-
-    # def get_image(self , topproduct):
-    #     return topproduct.product.image    
+        return topproduct.product.price   
 
     class Meta:
         model = AmazingOffer
         fields = ('product' , 'price' , 'product_detail')
+
+class NewestItemsSerializer(ModelSerializer):
+    class Meta:
+        model = BaseItem
+        fields = ('name' , 'category' , 'price')

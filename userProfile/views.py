@@ -28,12 +28,12 @@ class UserSignupApiView(APIView):
             password = serializer.validated_data.get('password')
 
             try:
-                user = User.objects.create_user(username = username , email = email , phone = phone)
+                user = User.objects.create_user(username = username , email = email)
             except Exception as e:
                 return Response(str(e))
             else:
                 user.set_password(password)
-                profile = models.UserProfile.objects.create(user = user)
+                profile = models.UserProfile.objects.create(user = user , phone = phone)
                 token , _ = Token.objects.get_or_create(user = user)
                 user.save()    
 

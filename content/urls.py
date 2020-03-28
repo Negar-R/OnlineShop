@@ -15,6 +15,8 @@ router.register('Stationery' , ShowStationeries)
 router.register('Top_Products' , ShowTopProducts)
 router.register('Amazing_Offers' , ShowAmazingOffers)
 
+
 urlpatterns = [
     path('menu/' , include(router.urls)),
+    path('new_items' , NewsetItems.as_view()),
 ]

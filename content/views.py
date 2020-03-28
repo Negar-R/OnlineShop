@@ -1,11 +1,16 @@
 from rest_framework.viewsets import ReadOnlyModelViewSet , ModelViewSet , ViewSet
+from rest_framework.views import APIView
 from rest_framework import filters
 from rest_framework.response import Response
 from rest_framework.decorators import action
 
 from django.db.models import Q
+from django.http import HttpResponse , JsonResponse
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 
-from datetime import datetime
+from datetime import datetime , timedelta
+import time
 
 from .models import *
 from .serializers import *
@@ -113,3 +118,21 @@ class ShowAmazingOffers(ReadOnlyModelViewSet):
 
     queryset = AmazingOffer.objects.all()
     serializer_class = AmazingOfferSerializer
+
+CACHE_TIMEOUT_SECONDS = 30 * 60 * 60 * 24  # this is for 30 days
+class NewsetItems(APIView):
+
+    @method_decorator(cache_page(CACHE_TIMEOUT_SECONDS))
+    def get(self, request, format = None):
+        new_item_ids = []
+
+        one_month_ago = datetime.strftime(datetime.now() - timedelta(days = 30) , "%Y-%m-%d")
+
+        for item in Television.objects.all():
+            if str(item.created_date) > one_month_ago:
+                new_item_ids.append(item.id)
+
+        new_items = BaseItem.objects.filter(id__in = new_item_ids)
+
+        serializer = NewestItemsSerializer(new_items , many = True)
+        return Response(serializer.data)

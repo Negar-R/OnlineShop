@@ -110,11 +110,3 @@ class PayForItem(serializers.ModelSerializer):
     class Meta:
         model = Shopping_Cart
         fields = ('item' , 'quantity')    
-
-class PayConfirmation(serializers.Serializer):
-
-    state_choices = (
-        ('accept' , "I accept it , Go to payment state") ,
-        ('reject' , "I reject it , I want to change something")
-    )
-    status = serializers.ChoiceField(choices = state_choices)
