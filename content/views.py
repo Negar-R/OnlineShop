@@ -128,7 +128,7 @@ class NewsetItems(APIView):
 
         one_month_ago = datetime.strftime(datetime.now() - timedelta(days = 30) , "%Y-%m-%d")
 
-        for item in Television.objects.all():
+        for item in BaseItem.objects.all():
             if str(item.created_date) > one_month_ago:
                 new_item_ids.append(item.id)
 
