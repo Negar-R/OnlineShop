@@ -12,6 +12,8 @@ ipython = "*"
 djangorestframework = "*"
 python-memcached = "*"
 gunicorn = "*"
+celery = "*"
+djangorestframework-jwt = "*"
 
 [requires]
 python_version = "3.7"
