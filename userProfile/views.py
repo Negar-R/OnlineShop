@@ -17,38 +17,13 @@ class UserSignupApiView(APIView):
 
     serializer_class = serializers.SignupSerializer
 
-    def post(self , request):
-        serializer = self.serializer_class(data = request.data)
-        
+    def post(self, request):
+            
+        serializer = serializers.SignupSerializer(data = request.data)
         if serializer.is_valid():
-
-            username = serializer.validated_data.get('username')
-            email = serializer.validated_data.get('email')
-            phone = serializer.validated_data.get('phone')
-            password = serializer.validated_data.get('password')
-
-            try:
-                user = User.objects.create_user(username = username , email = email)
-            except Exception as e:
-                return Response(str(e))
-            else:
-                user.set_password(password)
-                profile = models.UserProfile.objects.create(user = user , phone = phone)
-                token , _ = Token.objects.get_or_create(user = user)
-                user.save()    
-
-            return Response({'message' : 'Your are successfuly singup dear {}'.format(username)})
-
-        else:
-
-            return Response(
-                serializer.errors , 
-                status = status.HTTP_400_BAD_REQUEST
-            )                
-
-
-class UserLoginApiView(ObtainAuthToken):
-    renderer_classes = api_settings.DEFAULT_RENDERER_CLASSES
+            serializer.save()
+            return Response({'message' : 'Your are successfuly singup dear {}'.format(request.data['username'])}) 
+        return Response(serializer.errors , status = status.HTTP_400_BAD_REQUEST)
 
 
 class UpdateProfileView(APIView):
