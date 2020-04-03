@@ -81,8 +81,7 @@ class Payment(ModelViewSet):
                 ordered.item.save()
                 ordered.save()
                 profile = userProfile.models.UserProfile.objects.filter(user = self.request.user)
-                addresses = userProfile.models.UserInformation.objects.filter(information = self.request.user.users)
-                address = addresses[int(self.request.data['address']) - 1]
+                address = userProfile.models.UserInformation.objects.get(id = self.request.data['address'])
                 factors = suppliar.models.Suppliar_Check_Order.objects.create(reciever = self.request.user , phone = profile[0].phone , address = address , factor = ordered)
             return Response({'message' : 'مشتری گرامی ، پرداخت شما با موفقیت انجام شد . به امید دیدار دوباره شما'})
         else:
