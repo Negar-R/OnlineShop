@@ -20,6 +20,8 @@ class ShowRefrigerators(ReadOnlyModelViewSet):
 
     queryset = Refrigerator.objects.all()
 
+    lookup_field = 'slug'
+
     filter_backends = (filters.SearchFilter , )
     search_fields = ('name' , 'brand' , 'category')
 
@@ -35,6 +37,8 @@ class ShowRefrigerators(ReadOnlyModelViewSet):
 class ShowTelevisions(ReadOnlyModelViewSet):
 
     queryset = Television.objects.all()
+
+    lookup_field = 'slug'
 
     filter_backends = (filters.SearchFilter , )
     search_fields = ('name' , 'brand' , 'category')
@@ -52,6 +56,8 @@ class ShowLaptobs(ReadOnlyModelViewSet):
 
     queryset = Laptob.objects.all()
 
+    lookup_field = 'slug'
+
     filter_backends = (filters.SearchFilter , )
     search_fields = ('name' , 'brand' , 'category')
 
@@ -68,6 +74,8 @@ class ShowMobiles(ReadOnlyModelViewSet):
 
     queryset = Mobile.objects.all()
 
+    lookup_field = 'slug'
+
     filter_backends = (filters.SearchFilter , )
     search_fields = ('name' , 'brand' , 'category')
 
@@ -83,6 +91,8 @@ class ShowBooks(ReadOnlyModelViewSet):
 
     queryset = Book.objects.all()
 
+    lookup_field = 'slug'
+
     filter_backends = (filters.SearchFilter , )
     search_fields = ('name' , 'brand' , 'category')
 
@@ -97,6 +107,8 @@ class ShowBooks(ReadOnlyModelViewSet):
 class ShowStationeries(ReadOnlyModelViewSet):
 
     queryset = Stationery.objects.all()
+
+    lookup_field = 'slug'
 
     filter_backends = (filters.SearchFilter , )
     search_fields = ('name' , 'brand' , 'category')

@@ -4,12 +4,15 @@ from .models import *
 
 # Register your models here.
 
-admin.site.register(BaseItem)
-admin.site.register(Refrigerator)
-admin.site.register(Television)
-admin.site.register(Laptob)
-admin.site.register(Mobile)
-admin.site.register(Book)
-admin.site.register(Stationery)
+class ItemsAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('name',)}
+
+admin.site.register(BaseItem , ItemsAdmin)
+admin.site.register(Refrigerator , ItemsAdmin)
+admin.site.register(Television , ItemsAdmin)
+admin.site.register(Laptob , ItemsAdmin)
+admin.site.register(Mobile , ItemsAdmin)
+admin.site.register(Book , ItemsAdmin)
+admin.site.register(Stationery , ItemsAdmin)
 admin.site.register(TopProduct)
 admin.site.register(AmazingOffer)

@@ -16,6 +16,7 @@ class BaseItem(models.Model):
     description = models.TextField()
     price = models.IntegerField()
     quantity = models.IntegerField()
+    slug = models.SlugField(unique = True , null = True)
     created_date = models.DateField(null = True , blank = True)
 
     def __str__(self):

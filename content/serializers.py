@@ -8,6 +8,8 @@ class RefrigeratorListSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Refrigerator
         fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+        lookup_field = 'slug'
+        extra_kwargs = {'detail': {'lookup_field': 'slug'}}
 
 class RefrigeratorDetailSerilizer(ModelSerializer):
     class Meta:
@@ -18,6 +20,8 @@ class TelevisionListSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Television
         fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+        lookup_field = 'slug'
+        extra_kwargs = {'detail': {'lookup_field': 'slug'}}
 
 class TelevisionDetailSerilizer(ModelSerializer):
     class Meta:
@@ -28,6 +32,8 @@ class LaptobListSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Laptob
         fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+        lookup_field = 'slug'
+        extra_kwargs = {'detail': {'lookup_field': 'slug'}}
 
 class LaptobDetailSerilizer(ModelSerializer):
     class Meta:
@@ -38,6 +44,8 @@ class MobileListSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Mobile
         fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+        lookup_field = 'slug'
+        extra_kwargs = {'detail': {'lookup_field': 'slug'}}
 
 class MobileDetailSerilizer(ModelSerializer):
     class Meta:
@@ -48,6 +56,8 @@ class BookListSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Book
         fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+        lookup_field = 'slug'
+        extra_kwargs = {'detail': {'lookup_field': 'slug'}}
 
 class BookDetailSerilizer(ModelSerializer):
     class Meta:
@@ -58,6 +68,8 @@ class StationeryListSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Stationery
         fields = ('name' , 'brand' , 'category' , 'price' , 'detail')
+        lookup_field = 'slug'
+        extra_kwargs = {'detail': {'lookup_field': 'slug'}}
 
 class StationeryDetailSerilizer(ModelSerializer):
     class Meta:
