@@ -17,7 +17,7 @@ class SignupSerializer(serializers.ModelSerializer):
         password2 = self.data.get("password2")
         print(password1, password2)
         if not password1 or not password2 or password1 != password2:
-            raise serializers.ValidationError(_('passwords must match'))
+            raise serializers.ValidationError(('passwords must match'))
         return password2
 
     def create(self, validated_data):
