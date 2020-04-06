@@ -9,7 +9,7 @@ router = DefaultRouter()
 router.register('update_profile' , views.UpdateProfileView , basename = 'userprofile')
 router.register('add_address' , views.AddAddressView , basename = 'userinformation')
 router.register('my_shopping_cart' , views.ShowMyShoppingCartView , basename = 'shopping_cart')
-router.register('my_paymented_iems' , views.ShowMyPaymentedItems , basename = 'suppliar_check_order')
+router.register('my_paymented_items' , views.ShowMyPaymentedItems , basename = 'suppliar_check_order')
 
 urlpatterns = [
     path('signup' , views.UserSignupApiView.as_view()),
