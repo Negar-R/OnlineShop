@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    # 'django_extensions',
 
     'content',
     'userProfile',
@@ -163,6 +164,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# show image
+# Show image
 MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Send Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'new.fighting.for.goal@gmail.com'
+EMAIL_HOST_PASSWORD = 'a2+b2=c2'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
