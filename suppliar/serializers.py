@@ -24,20 +24,16 @@ class FactorDetail(serializers.ModelSerializer):
 
     item = serializers.SerializerMethodField()
     quantity = serializers.SerializerMethodField()
-    status = serializers.SerializerMethodField()
 
     def get_item(self , shopping_cart):
         return shopping_cart.item.name
 
     def get_quantity(self , shopping_cart):
-        return shopping_cart.quantity    
-
-    def get_status(self , shopping_cart):
-        return shopping_cart.status    
+        return shopping_cart.quantity       
 
     class Meta:
         model = shoppingCart.models.Shopping_Cart
-        fields = ('item' , 'quantity' , 'status')
+        fields = ('item' , 'quantity')
 
 class CheckOrdersDetail(serializers.Serializer):
 
