@@ -11,9 +11,9 @@ psycopg2 = "*"
 ipython = "*"
 djangorestframework = "*"
 python-memcached = "*"
-gunicorn = "*"
 celery = "*"
 djangorestframework-jwt = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.7"
