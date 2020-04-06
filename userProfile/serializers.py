@@ -15,34 +15,29 @@ class SignupSerializer(serializers.ModelSerializer):
 
     email = serializers.EmailField()
     phone = serializers.CharField(max_length = 11)
-    password1 = serializers.CharField(label='password' , min_length = 4 , max_length = 100 , style = {'input_type' : 'password'})
-    password2 = serializers.CharField(label='password confirm' , min_length = 4 , max_length = 100 , style = {'input_type' : 'password'})
-
-    def get_clean_password(self):
-        password1 = self.data.get("password1")
-        password2 = self.data.get("password2")
-        if not password1 or not password2 or password1 != password2:
-            raise serializers.ValidationError(('passwords must match'))
-        return password2
+    password = serializers.CharField(label='password' , min_length = 4 , max_length = 100 , style = {'input_type' : 'password'})
 
     def create(self, validated_data):
-        clean_password = self.get_clean_password()
-        if clean_password:
-            user, _ = User.objects.get_or_create(username = validated_data['username'] , email = validated_data['email'])
-            user.set_password(clean_password)
-            user.save()
-            profile, _ = models.UserProfile.objects.get_or_create(user = user , phone = validated_data['phone'])
+        user, _ = User.objects.get_or_create(username = validated_data['username'] , email = validated_data['email'])
+        user.set_password(validated_data['password'])
 
-            subject = 'Verify your QuickPublisher account'
-            message = 'Follow this link to verify your account: ''http://localhost:8000%s' % reverse('verify', kwargs = {'uuid': str(profile.verification_uuid)})
+        user.save()
+        profile, _ = models.UserProfile.objects.get_or_create(user = user , phone = validated_data['phone'])
+        
+        subject = 'Verify your QuickPublisher account'
+        message = 'Follow this link to verify your account: ''http://localhost:8000%s' % reverse('verify', kwargs = {'uuid': str(profile.verification_uuid)})
+        try:
             send_mail(subject , message , EMAIL_HOST_USER , [user.email] , fail_silently = False)
-            
+        except:
+            # user.delete()
+            raise serializers.ValidationError("Your email address is not valid!")
+        else:
             return user
 
     class Meta:
         model = User
-        fields = ('username' , 'email' , 'phone' , 'password1', 'password2')
-        write_only_fields = ('password1', 'password2')
+        fields = ('username' , 'email' , 'phone' , 'password')
+        write_only_fields = ('password', )
 
 
 class UpdateProfileRetrieve(serializers.ModelSerializer):
