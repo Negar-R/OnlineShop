@@ -5,6 +5,7 @@ from rest_framework.permissions import IsAuthenticated , IsAdminUser
 from rest_framework.response import Response
 
 from shoppingCart import serializers , models
+from userProfile.views import IsVerifiedUser
 import suppliar
 import userProfile
 
@@ -13,7 +14,7 @@ import userProfile
 
 class MyCart(ModelViewSet):
 
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsVerifiedUser]
 
     def get_queryset(self):
         return models.Shopping_Cart.objects.filter(user = self.request.user , status = 'on_cart')
@@ -22,7 +23,7 @@ class MyCart(ModelViewSet):
 
 class MyOrders(ModelViewSet):
 
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsVerifiedUser]
 
     def get_queryset(self):
         query = models.Shopping_Cart.objects.filter(user = self.request.user , status = 'on_cart')
@@ -62,7 +63,7 @@ class MyOrders(ModelViewSet):
 
 class Payment(ModelViewSet):
 
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsVerifiedUser]
 
     def get_queryset(self):
         return models.Shopping_Cart.objects.filter(user = self.request.user , status = 'ready_to_payed')
