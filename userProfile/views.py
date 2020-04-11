@@ -8,14 +8,24 @@ from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet , ReadOnlyModelViewSet
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework import permissions
 from rest_framework.authtoken.models import Token
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.settings import api_settings
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.permissions import IsAuthenticated
+from rest_framework_jwt.views import ObtainJSONWebToken , JSONWebTokenAPIView
+from rest_framework_jwt.serializers import JSONWebTokenSerializer
+
 
 from userProfile import serializers , models
 import shoppingCart , suppliar
+
+
+class IsVerifiedUser(permissions.BasePermission):
+    def has_permission(self, request, view):
+        print("@@@@@@@@@@@" , request.user)
+        return request.user.users.is_verified
 
 
 class UserSignupApiView(APIView):
@@ -33,7 +43,7 @@ class UserSignupApiView(APIView):
 
 class UpdateProfileView(ModelViewSet):
 
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsVerifiedUser]
 
     def get_queryset(self):
         return User.objects.filter(username = self.request.user.username)
@@ -77,7 +87,7 @@ class UpdateProfileView(ModelViewSet):
 
 class AddAddressView(ModelViewSet):
 
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsVerifiedUser]
 
     def get_queryset(self):
         return models.UserInformation.objects.filter(information = self.request.user.users)
@@ -96,7 +106,7 @@ class AddAddressView(ModelViewSet):
 
 class ShowMyShoppingCartView(ReadOnlyModelViewSet):
 
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsVerifiedUser]
     
     def get_queryset(self):
         return shoppingCart.models.Shopping_Cart.objects.filter(user = self.request.user , status = 'on_cart')
@@ -112,7 +122,7 @@ class ShowMyShoppingCartView(ReadOnlyModelViewSet):
 
 class ShowMyPaymentedItems(ReadOnlyModelViewSet):
 
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated , IsVerifiedUser]
 
     def get_queryset(self):
         return suppliar.models.Suppliar_Check_Order.objects.filter(reciever = self.request.user)
