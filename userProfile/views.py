@@ -24,7 +24,6 @@ import shoppingCart , suppliar
 
 class IsVerifiedUser(permissions.BasePermission):
     def has_permission(self, request, view):
-        print("@@@@@@@@@@@" , request.user)
         return request.user.users.is_verified
 
 
