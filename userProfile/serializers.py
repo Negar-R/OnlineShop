@@ -26,13 +26,10 @@ class SignupSerializer(serializers.ModelSerializer):
         
         subject = 'Verify your QuickPublisher account'
         message = 'Follow this link to verify your account: ''http://localhost:8000%s' % reverse('verify', kwargs = {'uuid': str(profile.verification_uuid)})
-        try:
-            send_mail(subject , message , EMAIL_HOST_USER , [user.email] , fail_silently = False)
-        except:
-            # user.delete()
-            raise serializers.ValidationError("Your email address is not valid!")
-        else:
-            return user
+        
+        send_mail(subject , message , EMAIL_HOST_USER , [user.email] , fail_silently = False)
+        
+        return user
 
     class Meta:
         model = User
