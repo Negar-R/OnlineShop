@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from django.urls import reverse
 
-from OnlineShopProject.settings import EMAIL_HOST_USER
+# from OnlineShopProject.settings import EMAIL_HOST_USER
 from userProfile import models
 from suppliar.serializers import FactorDetail
 from suppliar.models import Suppliar_Check_Order
@@ -24,10 +24,10 @@ class SignupSerializer(serializers.ModelSerializer):
         user.save()
         profile, _ = models.UserProfile.objects.get_or_create(user = user , phone = validated_data['phone'])
         
-        subject = 'Verify your QuickPublisher account'
-        message = 'Follow this link to verify your account: ''http://localhost:8000%s' % reverse('verify', kwargs = {'uuid': str(profile.verification_uuid)})
+        # subject = 'Verify your QuickPublisher account'
+        # message = 'Follow this link to verify your account: ''http://localhost:8000%s' % reverse('verify', kwargs = {'uuid': str(profile.verification_uuid)})
         
-        send_mail(subject , message , EMAIL_HOST_USER , [user.email] , fail_silently = False)
+        # send_mail(subject , message , EMAIL_HOST_USER , [user.email] , fail_silently = False)
         
         return user
 

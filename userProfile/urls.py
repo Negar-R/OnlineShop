@@ -14,7 +14,7 @@ router.register('my_paymented_items' , views.ShowMyPaymentedItems , basename = '
 urlpatterns = [
     path('signup' , views.UserSignupApiView.as_view()),
     path('login/', obtain_jwt_token),
-    path('verify/(?P<uuid>[a-z0-9\-]+)/', views.verify, name='verify'),
+    # path('verify/(?P<uuid>[a-z0-9\-]+)/', views.verify, name='verify'),
     path('edit_profile/' , include(router.urls)),
     path('api-token-refresh/', refresh_jwt_token),
 ]
