@@ -90,10 +90,10 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'online_shop',
-        'USER': 'saleman',
-        'PASSWORD': 'hello costumers',
-        'HOST': 'localhost',
+        'NAME': '*',
+        'USER': '*',
+        'PASSWORD': '*',
+        'HOST': '*',
         'PORT': '',
     }
 }

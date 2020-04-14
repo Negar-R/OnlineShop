@@ -53,9 +53,12 @@ URL | Description
 ``127.0.0.1:8000/menu`` | In this url you can see online shop's items in multiple category such as : Refrigerator , Mobile , Book and etc.This is the only endpoint that is not necessary to register and it is public.
 ``127.0.0.1:8000/signup`` | To purchase products from online shop web site , you should register first.After that we send you a verification email and you should verify it to redirect to `login` page.So please enter a valid email !!
 ``127.0.0.1:8000/edit_prifile`` | For sending items , we need some information about you.e.g : address , phone , ... So please fill provided field in this url.
+``127.0.0.1:8000/edit_prifile/my_shopping_cart`` | All items that you added to your shopping cart , is here and you can see them.
+``127.0.0.1:8000/edit_prifile/my_paymented_items`` | You can see items that payed for them , here.
 ``127.0.0.1:8000/finance/MyShoppingCart`` | You can select your needful items and specify their quantities.
 ``127.0.0.1:8000/finance/MyOrders`` | You can see all items that are in your shopping cart and if you want to pay for them , you should accept them separately.Then they've been provided for pay.
 ``127.0.0.1:8000/finance/Payment`` | In this url you can select your desire address and pay for items.
 ``127.0.0.1:8000/suppliar`` | Just admin can access this section and can accept bought items and send them to contributed part.
+
 
 
