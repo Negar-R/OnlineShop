@@ -3,6 +3,7 @@ from rest_framework.views import APIView
 from rest_framework import filters
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from rest_framework.reverse import NoReverseMatch, reverse
 
 from django.db.models import Q
 from django.http import HttpResponse , JsonResponse
@@ -10,11 +11,53 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
 
 from datetime import datetime , timedelta
+from collections import OrderedDict
 import time
 
 from .models import *
 from .serializers import *
 from shoppingCart import serializers
+
+class APIRootView(APIView):
+
+    _ignore_model_permissions = True
+    schema = None  # exclude from schema
+    api_root_dict = None
+
+    def get(self, request, *args, **kwargs):
+        # Return a plain {"name": "hyperlink"} response.
+        ret = OrderedDict()
+        namespace = request.resolver_match.namespace
+        for key, url_name in self.api_root_dict.items():
+            if namespace:
+                url_name = namespace + ':' + url_name
+            try:
+                ret[key] = reverse(
+                    url_name,
+                    args=args,
+                    kwargs=kwargs,
+                    request=request,
+                    format=kwargs.get('format', None)
+                )
+            except NoReverseMatch:
+                # Don't bail out if eg. no list routes exist, only detail routes.
+                continue
+        
+        list_of_categories = []
+        dict1_of_categories = {}
+        dict2_of_categories = {}
+        dict3_of_categories = {}
+
+        dict1_of_categories['Home_appliance'] = [{'Refrigerator' : ret['Refrigerator']} , {'TV' : ret['TV']}]
+        dict2_of_categories['Digital_Products'] = [{'Laptob' : ret['Laptob']} , {'Mobile' : ret['Mobile']}]
+        dict3_of_categories['Educational'] = [{'Book' : ret['Book']} , {'Stationery' : ret['Stationery']}]
+
+        list_of_categories.append(dict1_of_categories)
+        list_of_categories.append(dict2_of_categories)
+        list_of_categories.append(dict3_of_categories)
+
+        return Response(list_of_categories)
+
 
 class ShowRefrigerators(ReadOnlyModelViewSet):
 
