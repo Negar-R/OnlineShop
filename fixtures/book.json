@@ -1,0 +1,38 @@
+[
+    {
+        "model": "content.book",
+        "pk": 22,
+        "fields": {
+            "author": "Daniel.A",
+            "publisher": "HarperCollins; 1 edition (May 8, 2018)",
+            "language": "english"
+        }
+    },
+    {
+        "model": "content.book",
+        "pk": 23,
+        "fields": {
+            "author": "Marilyn Sadler",
+            "publisher": "Random House Books for Young Readers; Unknown edition (September 12, 1983)",
+            "language": "english"
+        }
+    },
+    {
+        "model": "content.book",
+        "pk": 24,
+        "fields": {
+            "author": "L.T. RYAN",
+            "publisher": "Services LLC",
+            "language": "english"
+        }
+    },
+    {
+        "model": "content.book",
+        "pk": 25,
+        "fields": {
+            "author": "Jojo Moise",
+            "publisher": "Amut",
+            "language": "persian"
+        }
+    }
+]

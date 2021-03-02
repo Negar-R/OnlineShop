@@ -1,0 +1,38 @@
+[
+    {
+        "model": "content.refrigerator",
+        "pk": 18,
+        "fields": {
+            "voltage": 220,
+            "side_by_side": true,
+            "top_mount_freezer": false
+        }
+    },
+    {
+        "model": "content.refrigerator",
+        "pk": 19,
+        "fields": {
+            "voltage": 220,
+            "side_by_side": true,
+            "top_mount_freezer": false
+        }
+    },
+    {
+        "model": "content.refrigerator",
+        "pk": 20,
+        "fields": {
+            "voltage": 220,
+            "side_by_side": false,
+            "top_mount_freezer": true
+        }
+    },
+    {
+        "model": "content.refrigerator",
+        "pk": 21,
+        "fields": {
+            "voltage": 220,
+            "side_by_side": false,
+            "top_mount_freezer": true
+        }
+    }
+]

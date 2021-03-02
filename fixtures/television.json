@@ -1,0 +1,34 @@
+[
+    {
+        "model": "content.television",
+        "pk": 7,
+        "fields": {
+            "resolution": "4K Ultra HD",
+            "size": "55 in"
+        }
+    },
+    {
+        "model": "content.television",
+        "pk": 8,
+        "fields": {
+            "resolution": "4K Ultra HD",
+            "size": "60 in"
+        }
+    },
+    {
+        "model": "content.television",
+        "pk": 16,
+        "fields": {
+            "resolution": "4K Ultra HD",
+            "size": "55 in"
+        }
+    },
+    {
+        "model": "content.television",
+        "pk": 17,
+        "fields": {
+            "resolution": "4K Ultra HD",
+            "size": "54.6 in"
+        }
+    }
+]

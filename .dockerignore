@@ -41,7 +41,6 @@ ipython_config.py
 # .python-version
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -70,6 +69,4 @@ nginx.conf
 # !**/migrations
 # !**/migrations/__init__.py
 
-# volumes directory
-postgres_data/
-memcached_data/
+# deploy_fandogh

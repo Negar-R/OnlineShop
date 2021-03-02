@@ -1,0 +1,66 @@
+[
+    {
+        "model": "content.digitalproduct",
+        "pk": 3,
+        "fields": {
+            "color": "silver",
+            "ram_Gig": 8
+        }
+    },
+    {
+        "model": "content.digitalproduct",
+        "pk": 4,
+        "fields": {
+            "color": "black",
+            "ram_Gig": 8
+        }
+    },
+    {
+        "model": "content.digitalproduct",
+        "pk": 5,
+        "fields": {
+            "color": "white",
+            "ram_Gig": 8
+        }
+    },
+    {
+        "model": "content.digitalproduct",
+        "pk": 6,
+        "fields": {
+            "color": "black",
+            "ram_Gig": 16
+        }
+    },
+    {
+        "model": "content.digitalproduct",
+        "pk": 12,
+        "fields": {
+            "color": "red",
+            "ram_Gig": 64
+        }
+    },
+    {
+        "model": "content.digitalproduct",
+        "pk": 13,
+        "fields": {
+            "color": "silver",
+            "ram_Gig": 12
+        }
+    },
+    {
+        "model": "content.digitalproduct",
+        "pk": 14,
+        "fields": {
+            "color": "silver",
+            "ram_Gig": 4
+        }
+    },
+    {
+        "model": "content.digitalproduct",
+        "pk": 15,
+        "fields": {
+            "color": "white",
+            "ram_Gig": 8
+        }
+    }
+]

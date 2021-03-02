@@ -1,0 +1,5 @@
+kind: ExternalService
+name: online-shop-web
+spec:
+  image: online-shop:1.14
+  port: 80

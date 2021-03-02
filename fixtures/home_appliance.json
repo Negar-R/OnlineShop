@@ -1,0 +1,66 @@
+[
+    {
+        "model": "content.homeappliance",
+        "pk": 7,
+        "fields": {
+            "color": "silver",
+            "weight": 20
+        }
+    },
+    {
+        "model": "content.homeappliance",
+        "pk": 8,
+        "fields": {
+            "color": "black",
+            "weight": 30
+        }
+    },
+    {
+        "model": "content.homeappliance",
+        "pk": 16,
+        "fields": {
+            "color": "black",
+            "weight": 19
+        }
+    },
+    {
+        "model": "content.homeappliance",
+        "pk": 17,
+        "fields": {
+            "color": "black",
+            "weight": 17
+        }
+    },
+    {
+        "model": "content.homeappliance",
+        "pk": 18,
+        "fields": {
+            "color": "white",
+            "weight": 124
+        }
+    },
+    {
+        "model": "content.homeappliance",
+        "pk": 19,
+        "fields": {
+            "color": "silver",
+            "weight": 20
+        }
+    },
+    {
+        "model": "content.homeappliance",
+        "pk": 20,
+        "fields": {
+            "color": "white",
+            "weight": 19
+        }
+    },
+    {
+        "model": "content.homeappliance",
+        "pk": 21,
+        "fields": {
+            "color": "silver",
+            "weight": 16
+        }
+    }
+]

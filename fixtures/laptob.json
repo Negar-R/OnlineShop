@@ -1,0 +1,38 @@
+[
+    {
+        "model": "content.laptob",
+        "pk": 3,
+        "fields": {
+            "screen_size": "12 in",
+            "touch_screen_display": true,
+            "graphics_card": true
+        }
+    },
+    {
+        "model": "content.laptob",
+        "pk": 4,
+        "fields": {
+            "screen_size": "15.5 in",
+            "touch_screen_display": false,
+            "graphics_card": true
+        }
+    },
+    {
+        "model": "content.laptob",
+        "pk": 14,
+        "fields": {
+            "screen_size": "14.0 in",
+            "touch_screen_display": true,
+            "graphics_card": true
+        }
+    },
+    {
+        "model": "content.laptob",
+        "pk": 15,
+        "fields": {
+            "screen_size": "15.6 in",
+            "touch_screen_display": false,
+            "graphics_card": true
+        }
+    }
+]

@@ -1,0 +1,347 @@
+[
+    {
+        "model": "content.baseitem",
+        "pk": 2,
+        "fields": {
+            "name": "Samsung 55\" 4K UHD HDR LED Tizen Smart TV (UN55RU8000FXZC)",
+            "brand": "Samsung",
+            "image": "ItemsPic/tv_sam.jpg",
+            "category": "Home Appliance",
+            "description": "Enjoy movies, TV series, and console gaming like never before with this Samsung 55\" 4K HDR LED Tizen Smart TV. HDR and Dynamic Crystal Colour delivers impressively vivid colour in 4K to bring images to life on your screen. It comes pre-loaded with multiple streaming apps for easily finding content, and Bixby on TV adds convenience via voice control.",
+            "price": 2100000,
+            "quantity": 68,
+            "slug": null,
+            "created_date": null
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 3,
+        "fields": {
+            "name": "Apple MacBook 12\" Laptop w/ Retina (Intel Core m3 1.2GHz / 256GB SSD / 8GB RAM) - Silver - French",
+            "brand": "Apple",
+            "image": "ItemsPic/apple_macbook.jpg",
+            "category": "Digital_Product",
+            "description": "MacBook delivers more performance in the lightest and thinnest Mac notebook ever. With new seventh-generation Intel Core processors, 12-inch Retina display,* a full-size keyboard, force-sensing trackpad, versatile USB-C port and all-day battery life,2 MacBook features big thinking in an impossibly compact form.",
+            "price": 30000000,
+            "quantity": 60,
+            "slug": "apple-macbook-12-laptop-w-retina-intel-core-m3-12g",
+            "created_date": "2020-03-21"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 4,
+        "fields": {
+            "name": "ASUS ROG Strix G 15.6\" Gaming Laptop (Intel Core i5-9300H/512GB SSD/8GB RAM/NVIDIA GeForce GTX 1650)",
+            "brand": "Asus",
+            "image": "ItemsPic/asus_rog.jpg",
+            "category": "Digital_Product",
+            "description": "Experience unparalleled game play at home or on the go with the ASUS ROG Strix G gaming laptop. Equipped with an Intel Core i5-9300H processor, 8GB of RAM, and an NVIDIA GTX 1650 graphics card, it provides crystal-clear imagery and fluid action to give you the edge over your opponents. Its 512GB SSD offers tons of storage space and speedy boot-ups.",
+            "price": 14000000,
+            "quantity": 68,
+            "slug": "asus-rog-strix-g-156-gaming-laptop-intel-core-i5-9",
+            "created_date": "2020-02-28"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 5,
+        "fields": {
+            "name": "Samsung Galaxy Note10 256GB - Aura Glow - Unlocked",
+            "brand": "Samsung",
+            "image": "ItemsPic/samsung_aura.jpg",
+            "category": "Digital_Product",
+            "description": "Take stunning photos, multi-task, and more all with the Samsung Galaxy Note10. This smartphone features 3 rear cameras and a front camera to capture amazing photos and fantastic selfies. Its 8GB of RAM and octa-core Snapdragon 855+ CPU can run all sorts of apps smoothly, while the 256GB storage capacity means ample room for your files and photos.",
+            "price": 5000000,
+            "quantity": 80,
+            "slug": "samsung-galaxy-note10-256gb-aura-glow-unlocked",
+            "created_date": "2020-03-28"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 6,
+        "fields": {
+            "name": "Apple iPhone XR 64GB Smartphone - Black - Unlocked - Certified Refurbished",
+            "brand": "iPhone",
+            "image": "ItemsPic/13527949.jpg",
+            "category": "Digital_Product",
+            "description": "READ SELLER'S STORE DESCRIPTION FOR MORE INFO. Certified Refurbished: The product is refurbished to manufacturer standards by a R2 Certified Refurbisher or category-specific equivalent, multi-point inspection, full data purge, cosmetic condition is 9/10 or better, minimum 90-day Seller-backed warranty.",
+            "price": 18000000,
+            "quantity": 79,
+            "slug": "apple-iphone-xr-64gb-smartphone-black-unlocked-cer",
+            "created_date": "2020-03-28"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 7,
+        "fields": {
+            "name": "Samsung 55\" 4K UHD HDR LED Tizen Smart TV (UN55RU8000FXZC)",
+            "brand": "Samsung",
+            "image": "ItemsPic/samsung_tv.jpg",
+            "category": "Home_Appliance",
+            "description": "Enjoy movies, TV series, and console gaming like never before with this Samsung 55\" 4K HDR LED Tizen Smart TV. HDR and Dynamic Crystal Colour delivers impressively vivid colour in 4K to bring images to life on your screen. It comes pre-loaded with multiple streaming apps for easily finding content, and Bixby on TV adds convenience via voice control.",
+            "price": 2100000,
+            "quantity": 70,
+            "slug": "samsung-55-4k-uhd-hdr-led-tizen-smart-tv-un55ru800",
+            "created_date": "2020-03-27"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 8,
+        "fields": {
+            "name": "Sony 65\" 4K UHD HDR LED Android Smart TV (XBR65X950G)",
+            "brand": "Sony",
+            "image": "ItemsPic/sony_65k.jpg",
+            "category": "Home_Appliance",
+            "description": "The Sony X950G is a 4K TV with prestige. Its stunning TRILUMINOS display boasts Ultra HD resolution and combines multiple cutting-edge technologies like the X1 Ultimate Processor, 4K HDR super bit mapping, and X-tended Dynamic Range PRO 6X to deliver incredible colour and clarity. Google Assistant and Android TV open up a world of smart possibilities.",
+            "price": 1700000,
+            "quantity": 58,
+            "slug": "sony-65-4k-uhd-hdr-led-android-smart-tv-xbr65x950g",
+            "created_date": "2020-03-22"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 12,
+        "fields": {
+            "name": "Virgin Mobile Apple iPhone XS Max 64GB - Gold - Select 2 Year Agreement",
+            "brand": "iPhone",
+            "image": "ItemsPic/vigira_iphone.jpg",
+            "category": "Digital_Product",
+            "description": "Super Retina in two sizes \\u2014 including the largest display ever on an iPhone. Even faster Face ID. The smartest, most powerful chip in a smartphone. And a breakthrough dual-camera system. iPhone XS is everything you love about iPhone. Taken to the extreme.",
+            "price": 100000,
+            "quantity": 100,
+            "slug": "virgin-mobile-apple-iphone-xs-max-64gb-gold-select",
+            "created_date": "2020-03-28"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 13,
+        "fields": {
+            "name": "Virgin Mobile Samsung Galaxy S20 5G 128GB - Cosmic Grey - Select 2 Year Agreement",
+            "brand": "Samsung",
+            "image": "ItemsPic/samsung_vigira.jpg",
+            "category": "Digital_Product",
+            "description": "Experience smartphone bliss with the Samsung Galaxy S20. It has a 6.2\" Dynamic AMOLED Infinity-O display for stunning imagery. Use the multiple rear cameras and 30X Space Zoom to take amazing photos. Plus, it has 5G compatibility for ultra-fast connections that let you stream all your favourite content like movies, music, and much more.",
+            "price": 50000,
+            "quantity": 79,
+            "slug": "virgin-mobile-samsung-galaxy-s20-5g-128gb-cosmic-g",
+            "created_date": "2020-03-23"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 14,
+        "fields": {
+            "name": "ASUS Chromebook Flip 14\" Touchscreen 2-in-1 Laptop (Intel Cm3-8100Y/64GB eMMC/4GB RAM/Chrome OS)",
+            "brand": "Asus",
+            "image": "ItemsPic/asus_laptob.jpg",
+            "category": "Digital_Product",
+            "description": "Tackle those large school or work reports quickly and efficiently with this two-in-one ASUS touchscreen Chromebook. Pairing an Intel Cm3-8100Y processor and 4GB of RAM to ensure performance remains smooth even with a large number of apps open, this Chromebook comes with a slim-bezeled NanoEdge display for an immersive viewing experience.",
+            "price": 6000000,
+            "quantity": 90,
+            "slug": "asus-chromebook-flip-14-touchscreen-2-1-laptop-int",
+            "created_date": "2020-02-28"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 15,
+        "fields": {
+            "name": "ASUS VivoBook S15 Thin 15.6\" Laptop (Intel Core i5-8265U/512GB SSD/8GB RAM/Windows 10)",
+            "brand": "Asus",
+            "image": "ItemsPic/vivo_book.jpg",
+            "category": "Digital_Product",
+            "description": "With power a thin, lightweight design, this ASUS VivoBook laptop is ideal for home, work, school, and more. Its Intel Core i5-8265U processor assures reliable and lag-free performance, and the 512GB of total hard disk capacity offers ample storage space for your files and software, plus the ScreenPad helps you multi-task and use your PC in new ways.",
+            "price": 30000,
+            "quantity": 90,
+            "slug": "asus-vivobook-s15-thin-156-laptop-intel-core-i5-82",
+            "created_date": "2020-03-28"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 16,
+        "fields": {
+            "name": "LG 55\" 4K UHD HDR OLED WebOS Smart TV (OLED55B9PUA)",
+            "brand": "LG",
+            "image": "ItemsPic/lg_tv.jpg",
+            "category": "Home_Appliance",
+            "description": "Elevate your home entertainment with the LG 55\" OLED TV. Featuring an LG AI-powered processor and Dolby technologies, this TV deliver serious audio and visual quality. Plus, built-in Google Assistant and Amazon Alexa give you convenient voice control, so you can change the channel, turn up the volume, and scroll through movie without moving an inch.",
+            "price": 900000,
+            "quantity": 58,
+            "slug": "lg-55-4k-uhd-hdr-oled-webos-smart-tv-oled55b9pua",
+            "created_date": "2020-03-20"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 17,
+        "fields": {
+            "name": "TCL 6-Series 55\" 4K UHD HDR LED Roku OS Smart TV (55R615-CA)",
+            "brand": "Samsung",
+            "image": "ItemsPic/tlc_tv.jpg",
+            "category": "Home_Appliance",
+            "description": "Enjoy premium downtime with TLC's 6-Series Roku Smart TV. A massive 55\" screen with 4K UHD and Dolby Vison HDR support combine to deliver breathtaking picture quality. With Roku's OS and its simplified user interface, as well as a remote control, you can easily find and stream your favourite movies, TV shows, and sports right from your TV.",
+            "price": 600000,
+            "quantity": 68,
+            "slug": "tcl-6-series-55-4k-uhd-hdr-led-roku-os-smart-tv-55",
+            "created_date": "2020-03-28"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 18,
+        "fields": {
+            "name": "Frigidaire 33\" 22.1 Cu. Ft. Side-By-Side Refrigerator with Water & Ice Dispenser",
+            "brand": "Delonghi",
+            "image": "ItemsPic/refrigerator.jpg",
+            "category": "Home_Appliance",
+            "description": "Organize your kitchen with the Frigidaire 22.1 cu. ft. side-by-side refrigerator. A customizable layout, combined with Store-More drawers and shelves, gives you all the space you need for your favourite foods and beverages. This fridge also boasts the PureSource 3 water filtration system to deliver clean water and ice right from the door.",
+            "price": 9000000,
+            "quantity": 60,
+            "slug": "frigidaire-33-221-cu-ft-side-side-refrigerator-wat",
+            "created_date": "2020-03-24"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 19,
+        "fields": {
+            "name": "LG InstaView 36\" 21.7 Cu. Ft. Counter-Depth Side-By-Side Refrigerator",
+            "brand": "LG",
+            "image": "ItemsPic/lg_fridg.jpg",
+            "category": "Home_Appliance",
+            "description": "Peruse the contents of the InstaView side-by-side refrigerator by LG without ever opening the door. Minimize cold air loss with this 21.7 cu. ft. fridge that shows you what's inside by knocking twice on the glass to instantly illuminate the interior. The energy-conserving, door-in-door design offers quick access to your favourite foods and drinks.",
+            "price": 888000,
+            "quantity": 100,
+            "slug": "lg-instaview-36-217-cu-ft-counter-depth-side-side",
+            "created_date": "2020-03-28"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 20,
+        "fields": {
+            "name": "Frigidaire 30\" 18 Cu. Ft. Freestanding Top Freezer Refrigerator",
+            "brand": "Sony",
+            "image": "ItemsPic/fridge2.jpg",
+            "category": "Home_Appliance",
+            "description": "Store yummy treats, healthy meals, and refreshing beverages in this free-standing 18 cu. ft. Frigidaire top-freezer fridge. Featuring full-width wire shelves, 2 humidity-controlled crisper drawers, and a dairy bin, this fridge offers organized food storage for any kitchen. The reversible door lets you fit the fridge to your space.",
+            "price": 30000,
+            "quantity": 64,
+            "slug": "frigidaire-30-18-cu-ft-freestanding-top-freezer-re",
+            "created_date": "2020-03-21"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 21,
+        "fields": {
+            "name": "Insignia 24\" 11.5 Cu. Ft. Top Freezer Refrigerator (NS-RTM12SS7-C) - Stainless Steel",
+            "brand": "Delonghi",
+            "image": "ItemsPic/del_fridge.jpg",
+            "category": "Home_Appliance",
+            "description": "Keep all of your supermarket finds fresh or frozen with this Insignia 11.5 cu. ft. fridge. It features a top-mount freezer that keeps all of your favourite frozen treats at a convenient level. The fresh food compartment has 4 full-width, spill-proof shelves, 4L bottle storage bin, and 2 crisper drawers to help your fruits and veggies stay fresh.",
+            "price": 890000,
+            "quantity": 59,
+            "slug": "insignia-24-115-cu-ft-top-freezer-refrigerator-ns",
+            "created_date": "2020-03-28"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 22,
+        "fields": {
+            "name": "The Bad Seed",
+            "brand": "-",
+            "image": "ItemsPic/book_bad_seed.jpg",
+            "category": "Educational",
+            "description": "K-Gr 2\\u2014Corn kernels, pistachios, peanuts, and other seeds gasp and point as a \"baaaaaaaaaaad seed\" goes by. When others mumble about him, he can hear them because he has \"good hearing for a seed.\" The bad seed tells \"long jokes with no punch lines,\" lies \"about pointless stuff,\" and never puts things back where they belong. But he did not start out that way; it was only after a traumatic experience that he became \"a different seed entirely.\" Through a mixture of watercolor textures and digital paint, Oswald creates a faded cityscape background. The seeds, on the other hand, have stronger colors and expressive faces. (Their sticklike arms and legs and large eyes make them reminiscent of the California Raisins.) The contrast between the bright, sunlit field and the dark interior of a sunflower seed bag highlights the protagonist's downturn in fortune. Young readers will find the list of all the seed's offenses amusing, and the illustration of the flies and stench surrounding him (he never washes his hands or feet) is sure to elicit laughter. Even the very youngest can follow along as the pictures provide evidence of the seed's bad behavior and the reactions of those around him. This is a story that opens up dialogue about our reactions to life experiences, the consequences of our choices, and the chance to make a change for the better. VERDICT This charmingly illustrated book would be a comical read-aloud and useful for class or family discussions about manners, behavior, and reputation.\\u2014Suzanne Costner, Fairview Elementary School, Maryville, TN",
+            "price": 12,
+            "quantity": 79,
+            "slug": "bad-seed",
+            "created_date": "2020-03-22"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 23,
+        "fields": {
+            "name": "It's Not Easy Being a Bunny",
+            "brand": "-",
+            "image": "ItemsPic/book_rabbit.jpg",
+            "category": "Educational",
+            "description": "Illus. in full color. \"Sick of being a bunny, P. J. Funnybunny takes off to become a bear. Hibernation gets dull, so he tries being a bird. And so it goes, with beavers, pigs, possums, and skunks--till P. J. realizes that bunnyhood is for him. The short, repeating text is ideal for beginners and the bright, humorous cartoons will get immediate attention.\"-- \"School Library Journal.",
+            "price": 6,
+            "quantity": 98,
+            "slug": "its-not-easy-being-bunny",
+            "created_date": "2020-03-29"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 24,
+        "fields": {
+            "name": "Noble Beginnings A Jack Noble Thriller",
+            "brand": "-",
+            "image": "ItemsPic/book_nobel.jpg",
+            "category": "Educational",
+            "description": "\"Jason Bourne. Jack Ryan. Jack Bauer. Now Jack Noble. For fans of political intrigue, military mystery and conspiracy Jack Noble is a perfect fit. Enough action, intrigue, and plot twists to keep you interested and turning pages. Looking forward to the next one.\"\r\n\"Jack Noble is Jack Reacher with a harder edge!\"",
+            "price": 3,
+            "quantity": 93,
+            "slug": "noble-beginnings-jack-noble-thriller",
+            "created_date": "2020-03-27"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 25,
+        "fields": {
+            "name": "\\u0645\\u0646 \\u067e\\u06cc\\u0634 \\u0627\\u0632 \\u062a\\u0648",
+            "brand": "-",
+            "image": "ItemsPic/1151305.jpg",
+            "category": "Educational",
+            "description": "\\u0628\\u062f\\u0648\\u0646 \\u0634\\u0631\\u062d !!!",
+            "price": 20,
+            "quantity": 90,
+            "slug": "man-pish-az-to",
+            "created_date": "2020-03-28"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 26,
+        "fields": {
+            "name": "\\u0642\\u0644\\u0645 \\u0633\\u0647 \\u06a9\\u0627\\u0631\\u0647 \\u06a9\\u0631\\u0646\\u062f \\u0645\\u062f\\u0644 ROTA (\\u0645\\u062f\\u0627\\u062f \\u0646\\u0648\\u06a9\\u06cc \\u06f0.\\u06f5 \\u0648 \\u062f\\u0648 \\u0631\\u0646\\u06af \\u062e\\u0648\\u062f\\u06a9\\u0627\\u06310.7)\\u062a\\u06a9 \\u0639\\u062f\\u062f\\u06cc",
+            "brand": "CREND",
+            "image": "ItemsPic/49962061.jpg",
+            "category": "Educational",
+            "description": "\\u0642\\u0644\\u0645 \\u0633\\u0647 \\u06a9\\u0627\\u0631\\u0647",
+            "price": 20,
+            "quantity": 69,
+            "slug": "gkalam-seh-kare-kerend",
+            "created_date": "2020-03-21"
+        }
+    },
+    {
+        "model": "content.baseitem",
+        "pk": 27,
+        "fields": {
+            "name": "\\u0631\\u0648\\u0627\\u0646 \\u0646\\u0648\\u06cc\\u0633 \\u067e\\u0646\\u062a\\u0631 \\u0645\\u062f\\u0644 FL 101",
+            "brand": "Panter",
+            "image": "ItemsPic/47301121.jpg",
+            "category": "Educational",
+            "description": "\\u0628\\u062f\\u0646\\u0647\\u200c\\u06cc \\u0627\\u06cc\\u0646 \\u0631\\u0648\\u0627\\u0646\\u200c\\u0646\\u0648\\u06cc\\u0633 \\u0628\\u0647 \\u0635\\u0648\\u0631\\u062a \\u0645\\u062b\\u0644\\u062b\\u06cc \\u0648 \\u0627\\u0631\\u06af\\u0648\\u0646\\u0648\\u0645\\u06cc\\u06a9 \\u0637\\u0631\\u0627\\u062d\\u06cc \\u0634\\u062f\\u0647 \\u0627\\u0633\\u062a \\u0648 \\u0627\\u0646\\u06af\\u0634\\u062a\\u0627\\u0646 \\u062f\\u0633\\u062a \\u062f\\u0631 \\u0631\\u0627\\u062d\\u062a\\u200c\\u062a\\u0631\\u06cc\\u0646 \\u0648\\u0636\\u0639\\u06cc\\u062a \\u0645\\u0645\\u06a9\\u0646 \\u0631\\u0648\\u06cc \\u0627\\u06cc\\u0646 \\u0628\\u062f\\u0646\\u0647\\u200c\\u06cc \\u0622\\u0646 \\u0642\\u0631\\u0627\\u0631 \\u0645\\u06cc\\u200c\\u06af\\u06cc\\u0631\\u0646\\u062f",
+            "price": 70,
+            "quantity": 48,
+            "slug": "ravon-nevis-panter-model-fl-101",
+            "created_date": "2020-03-24"
+        }
+    }
+]

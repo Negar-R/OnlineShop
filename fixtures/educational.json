@@ -1,0 +1,44 @@
+[
+    {
+        "model": "content.educational",
+        "pk": 22,
+        "fields": {
+            "recommendede_ages": "5 years and up"
+        }
+    },
+    {
+        "model": "content.educational",
+        "pk": 23,
+        "fields": {
+            "recommendede_ages": "3 years and up"
+        }
+    },
+    {
+        "model": "content.educational",
+        "pk": 24,
+        "fields": {
+            "recommendede_ages": "14 years and up"
+        }
+    },
+    {
+        "model": "content.educational",
+        "pk": 25,
+        "fields": {
+            "recommendede_ages": "14 years and up"
+        }
+    },
+    {
+        "model": "content.educational",
+        "pk": 26,
+        "fields": {
+            "recommendede_ages": "3 years and up"
+        }
+    },
+    {
+        "model": "content.educational",
+        "pk": 27,
+        "fields": {
+            "recommendede_ages": "3 years and up"
+        }
+    }
+]

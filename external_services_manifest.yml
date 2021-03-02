@@ -1,0 +1,31 @@
+kind: ExternalService
+name: db-service
+spec:
+  image: library/postgres:12.5-alpine
+  port_mapping: 
+    - port: 5432
+      target_port: 5432
+      protocol: TCP
+  env:
+    - name: POSTGRES_PASSWORD
+      value: online_shop_pass
+    - name: POSTGRES_USER
+      value: online_shop_user
+    - name: POSTGRES_DB
+      value: online_shop_db
+  volume_mounts: 
+    - mount_path: /postgres_data/postgres
+      sub_path: postgres
+
+---
+kind: ExternalService
+name: memcached-service
+spec:
+  image: library/memcached:1.6.9-alpine
+  port_mapping: 
+    - port: 11211
+      target_port: 11211
+      protocol: TCP
+  volume_mounts: 
+    - mount_path: /memcached_data/memcached
+      sub_path: memcached
