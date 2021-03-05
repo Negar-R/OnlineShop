@@ -1,0 +1,1451 @@
+{
+	"id": "1bf84ec7-9224-40cc-a451-505a6fcbdb52",
+	"name": "online_shop",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"d92f8715-6c69-4cb6-94b0-f13c0b600db3",
+		"0b37c4d2-064a-4044-962a-8b25edb33bc7",
+		"d2e0f526-10d5-41cf-9c31-0f25882b81cc"
+	],
+	"protocolProfileBehavior": {},
+	"folders": [
+		{
+			"id": "d92f8715-6c69-4cb6-94b0-f13c0b600db3",
+			"name": "Items",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52",
+			"folder": null,
+			"order": [
+				"1ee4ca83-d4d4-4473-a36a-fc8a885579cb"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "d2e0f526-10d5-41cf-9c31-0f25882b81cc",
+			"name": "finance",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52",
+			"folder": null,
+			"order": [
+				"b988c19e-a51a-4f6d-b080-492169ef89d5",
+				"c0ade723-364d-4934-96ec-29d4aec12bb5",
+				"1dc5b78f-9a7f-4a2e-8c5b-6cbdc5463d96",
+				"9b1cdf8d-d1b2-4dd8-bdf5-7b7f224fe84f",
+				"4d05c3e8-c785-4f6a-bff8-2446224c5e39",
+				"785e858c-7004-4644-aeb5-8b9fd7ea547e",
+				"a832c01b-8146-424e-950a-b26a37b88414"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "0b37c4d2-064a-4044-962a-8b25edb33bc7",
+			"name": "profile",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52",
+			"folder": null,
+			"order": [
+				"2ee372d0-d1a4-41c3-ad36-914d86f79063",
+				"776ee6d7-b563-47c9-8804-44bf02517751",
+				"907628ea-c0e5-4807-b8ef-778ec1e5a0c6",
+				"8d86af22-37d7-41c5-aa51-92e300ecd686",
+				"77a7da99-ce15-47a9-9d58-3413da782990",
+				"47a4f155-da38-496f-9650-2e4e27116847",
+				"054d3d6e-3dfd-4c35-9365-d23e44e75c9a",
+				"771e331c-6671-46e6-a461-91c11c876301",
+				"a2a1df9a-49c2-4220-9e1a-977b0f5051cd"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "054d3d6e-3dfd-4c35-9365-d23e44e75c9a",
+			"name": "add_address",
+			"url": "{{url}}/edit_profile/add_address/",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "0b37c4d2-064a-4044-962a-8b25edb33bc7",
+			"responses": [
+				{
+					"id": "38a3cfab-7301-49bc-abbd-327fb67487cf",
+					"name": "add_address",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"message\": \"This address has saved for you\"\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": [],
+						"dataMode": "raw",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"headerData": [],
+						"method": "POST",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/edit_profile/add_address/",
+						"rawModeData": "{\n    \"address\": \"Teharn, Jordan\"\n}"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 11:27:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "054d3d6e-3dfd-4c35-9365-d23e44e75c9a",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"rawModeData": "{\n    \"address\": \"Teharn, Jordan\"\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "1dc5b78f-9a7f-4a2e-8c5b-6cbdc5463d96",
+			"name": "update_the_status_of_orders",
+			"url": "{{url}}/finance/MyOrders/3/",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "d2e0f526-10d5-41cf-9c31-0f25882b81cc",
+			"responses": [
+				{
+					"id": "bcdc0cb6-a3ed-4d22-896b-00e974f24199",
+					"name": "update_the_status_of_orders",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"message\": \"مشتری عزیز : وضعیت این جنس در سبد خرید شما به حالت تایید شده درآمد . جنس تایید شده آمده پرداخت میباشد\"\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": [],
+						"dataMode": "raw",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"headerData": [],
+						"method": "PUT",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/finance/MyOrders/3/",
+						"rawModeData": "{\n    \"status\": \"accept\"\n}"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 13:16:32 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "193"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "1dc5b78f-9a7f-4a2e-8c5b-6cbdc5463d96",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"rawModeData": "{\n    \"status\": \"accept\"\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "1ee4ca83-d4d4-4473-a36a-fc8a885579cb",
+			"name": "get_items",
+			"url": "{{url}}/menu/",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "d92f8715-6c69-4cb6-94b0-f13c0b600db3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "2ee372d0-d1a4-41c3-ad36-914d86f79063",
+			"name": "signup",
+			"url": "{{url}}/signup",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "0b37c4d2-064a-4044-962a-8b25edb33bc7",
+			"responses": [
+				{
+					"id": "b6af95f9-ed70-4b10-87a0-ebcf2ee3e7fc",
+					"name": "signup",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"message\": \"Your are successfuly singup dear negar\"\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": [],
+						"dataMode": "raw",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"headerData": [],
+						"method": "POST",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/signup",
+						"rawModeData": "{\n    \"username\": \"negar\",\n    \"email\": \"negar@gmail.com\",\n    \"phone\": \"0922789\",\n    \"password\": \"1234\"\n}"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 10:26:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "2ee372d0-d1a4-41c3-ad36-914d86f79063",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"rawModeData": "{\n    \"username\": \"negar\",\n    \"email\": \"negar@gmail.com\",\n    \"phone\": \"0922789\",\n    \"password\": \"1234\"\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "47a4f155-da38-496f-9650-2e4e27116847",
+			"name": "update_specific_profile",
+			"url": "{{url}}/edit_profile/update_profile/3/",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "0b37c4d2-064a-4044-962a-8b25edb33bc7",
+			"responses": [
+				{
+					"id": "34af8f02-5be2-4127-aa92-4bb9b8c3eac7",
+					"name": "update_specific_profile",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"message\": \"Your profile was updated dear Negar Rezaei\"\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": [],
+						"dataMode": "raw",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"headerData": [],
+						"method": "PUT",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/edit_profile/update_profile/3/",
+						"rawModeData": "{\n    \"username\": \"negar\",\n    \"first_name\": \"Negar\",\n    \"last_name\": \"Rezaei\",\n    \"email\": \"negar@gmail.com\"\n}"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 11:24:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "47a4f155-da38-496f-9650-2e4e27116847",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"rawModeData": "{\n    \"username\": \"negar\",\n    \"first_name\": \"Negar\",\n    \"last_name\": \"Rezaei\",\n    \"email\": \"negar@gmail.com\"\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "4d05c3e8-c785-4f6a-bff8-2446224c5e39",
+			"name": "add_to_shopping_cart",
+			"url": "{{url}}/finance/MyShoppingCart/",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "d2e0f526-10d5-41cf-9c31-0f25882b81cc",
+			"responses": [
+				{
+					"id": "2b7b5901-025b-4831-9fbf-77e6e2928f70",
+					"name": "add_to_shopping_cart",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"item\": 17,\n    \"item_name\": \"TCL 6-Series 55\\\" 4K UHD HDR LED Roku OS Smart TV (55R615-CA)\",\n    \"quantity\": 1,\n    \"sabad_id\": 5\n}",
+					"responseCode": {
+						"code": 201,
+						"name": "Created"
+					},
+					"requestObject": {
+						"data": [],
+						"dataMode": "raw",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"headerData": [],
+						"method": "POST",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/finance/MyShoppingCart/",
+						"rawModeData": "{\n    \"item\": 17,\n    \"quantity\": 1\n}"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 13:19:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "113"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "4d05c3e8-c785-4f6a-bff8-2446224c5e39",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"rawModeData": "{\n    \"item\": 17,\n    \"quantity\": 1\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "771e331c-6671-46e6-a461-91c11c876301",
+			"name": "get_shopping_cart",
+			"url": "{{url}}/edit_profile/my_shopping_cart/",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "0b37c4d2-064a-4044-962a-8b25edb33bc7",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "776ee6d7-b563-47c9-8804-44bf02517751",
+			"name": "login",
+			"url": "{{url}}/login/",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "0b37c4d2-064a-4044-962a-8b25edb33bc7",
+			"responses": [
+				{
+					"id": "85eb12eb-c3b5-4f24-af74-0b5ec838d68d",
+					"name": "login",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5lZ2FyIiwiZXhwIjoxNjE1MDI2NTg4LCJlbWFpbCI6Im5lZ2FyQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjE0OTQwMTg4fQ.eeF92v01pbRTYpFaM696uYvPXLVBgPLtO5uTqk5Kjog\"\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": [],
+						"dataMode": "raw",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"headerData": [],
+						"method": "POST",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/login/",
+						"rawModeData": "{\n    \"username\": \"negar\",\n    \"password\": \"1234\"\n}"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 10:29:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "Authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5lZ2FyIiwiZXhwIjoxNjE1MDI2NTg4LCJlbWFpbCI6Im5lZ2FyQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjE0OTQwMTg4fQ.eeF92v01pbRTYpFaM696uYvPXLVBgPLtO5uTqk5Kjog; expires=Sat, 06 Mar 2021 10:29:48 GMT; HttpOnly; Max-Age=86400; Path=/"
+						}
+					],
+					"cookies": null,
+					"request": "776ee6d7-b563-47c9-8804-44bf02517751",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"rawModeData": "{\n    \"username\": \"negar\",\n    \"password\": \"1234\"\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "77a7da99-ce15-47a9-9d58-3413da782990",
+			"name": "get_specific_profile",
+			"url": "{{url}}/edit_profile/update_profile/3",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "0b37c4d2-064a-4044-962a-8b25edb33bc7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"responses": [
+				{
+					"id": "2e897a8f-da50-411a-a813-2585bc530d7e",
+					"name": "get_specific_profile",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"username\": \"negar\",\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"email\": \"negar@gmail.com\"\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": [],
+						"dataMode": "raw",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"headerData": [],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/edit_profile/update_profile/3",
+						"protocolProfileBehavior": {
+							"disableBodyPruning": true
+						},
+						"rawModeData": ""
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 11:20:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "77"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "77a7da99-ce15-47a9-9d58-3413da782990",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"rawModeData": "",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "785e858c-7004-4644-aeb5-8b9fd7ea547e",
+			"name": "pay_for_accepted_items",
+			"url": "{{url}}/finance/Payment/",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "d2e0f526-10d5-41cf-9c31-0f25882b81cc",
+			"responses": [
+				{
+					"id": "50195e7d-3697-4084-9f06-03fa4f5e6115",
+					"name": "pay_for_accepted_items",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"message\": \"مشتری گرامی ، پرداخت شما با موفقیت انجام شد . به امید دیدار دوباره شما\"\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": [],
+						"dataMode": "raw",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"headerData": [],
+						"method": "POST",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/finance/Payment/",
+						"rawModeData": "{\n    \"status\": \"accept\",\n    \"address\": 3\n}"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 13:27:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "139"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "785e858c-7004-4644-aeb5-8b9fd7ea547e",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"rawModeData": "{\n    \"status\": \"accept\",\n    \"address\": 3\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "8d86af22-37d7-41c5-aa51-92e300ecd686",
+			"name": "get_update_profile",
+			"url": "{{url}}/edit_profile/update_profile/",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5lZ2FyIiwiZXhwIjoxNjE1MDI4NDEyLCJlbWFpbCI6Im5lZ2FyQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjE0OTQyMDEyfQ.hVKxK70JRH2d94hPOvW4j_KvmOZaqW2iMyeE1YFtGvQ",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "noauth",
+				"noauth": []
+			},
+			"events": [],
+			"folder": "0b37c4d2-064a-4044-962a-8b25edb33bc7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"responses": [
+				{
+					"id": "c3d24819-c156-4913-adf4-179ebaec1a5f",
+					"name": "get_update_profile",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "[\n    {\n        \"user\": \"negar\",\n        \"email\": \"negar@gmail.com\",\n        \"phone\": \"0922789\",\n        \"id\": 3\n    }\n]",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": [],
+						"dataMode": "raw",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"headerData": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5lZ2FyIiwiZXhwIjoxNjE1MDI4NDEyLCJlbWFpbCI6Im5lZ2FyQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjE0OTQyMDEyfQ.hVKxK70JRH2d94hPOvW4j_KvmOZaqW2iMyeE1YFtGvQ",
+								"description": "",
+								"type": "text",
+								"enabled": false
+							}
+						],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/edit_profile/update_profile/",
+						"protocolProfileBehavior": {
+							"disableBodyPruning": true
+						},
+						"rawModeData": ""
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 11:15:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "69"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "8d86af22-37d7-41c5-aa51-92e300ecd686",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"rawModeData": "",
+			"headers": "//Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5lZ2FyIiwiZXhwIjoxNjE1MDI4NDEyLCJlbWFpbCI6Im5lZ2FyQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjE0OTQyMDEyfQ.hVKxK70JRH2d94hPOvW4j_KvmOZaqW2iMyeE1YFtGvQ\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "907628ea-c0e5-4807-b8ef-778ec1e5a0c6",
+			"name": "get_edit_profile_page",
+			"url": "{{url}}/edit_profile",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5lZ2FyIiwiZXhwIjoxNjE1MDI2NTg4LCJlbWFpbCI6Im5lZ2FyQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjE0OTQwMTg4fQ.eeF92v01pbRTYpFaM696uYvPXLVBgPLtO5uTqk5Kjog",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "0b37c4d2-064a-4044-962a-8b25edb33bc7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5lZ2FyIiwiZXhwIjoxNjE1MDI2NTg4LCJlbWFpbCI6Im5lZ2FyQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjE0OTQwMTg4fQ.eeF92v01pbRTYpFaM696uYvPXLVBgPLtO5uTqk5Kjog\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9b1cdf8d-d1b2-4dd8-bdf5-7b7f224fe84f",
+			"name": "get_finance_page",
+			"url": "{{url}}/finance",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "d2e0f526-10d5-41cf-9c31-0f25882b81cc",
+			"responses": [
+				{
+					"id": "c965b7f2-0bf2-419a-b120-3c1cd8e554b8",
+					"name": "get_finance_page",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"MyShoppingCart\": \"http://online-shop-web-mapsabootcamp.fandogh.cloud/finance/MyShoppingCart/\",\n    \"MyOrders\": \"http://online-shop-web-mapsabootcamp.fandogh.cloud/finance/MyOrders/\",\n    \"Payment\": \"http://online-shop-web-mapsabootcamp.fandogh.cloud/finance/Payment/\"\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": null,
+						"dataMode": null,
+						"dataOptions": null,
+						"headerData": [],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/finance"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 13:17:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookies": null,
+					"request": "9b1cdf8d-d1b2-4dd8-bdf5-7b7f224fe84f",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a2a1df9a-49c2-4220-9e1a-977b0f5051cd",
+			"name": "get_paymented_items",
+			"url": "{{url}}/edit_profile/my_paymented_items/",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "0b37c4d2-064a-4044-962a-8b25edb33bc7",
+			"responses": [
+				{
+					"id": "3f4477f2-1cf9-4f11-a64b-2bfe61149790",
+					"name": "get_paymented_items",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "[\n    {\n        \"username\": \"negar\",\n        \"email\": \"negar@gmail.com\",\n        \"phone\": \"0922789\",\n        \"address\": \"Teharn, Jordan\",\n        \"factor\": {\n            \"item\": \"من پیش از تو\",\n            \"quantity\": 1\n        }\n    }\n]",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": null,
+						"dataMode": null,
+						"dataOptions": null,
+						"headerData": [],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/edit_profile/my_paymented_items/"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 13:29:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "148"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "a2a1df9a-49c2-4220-9e1a-977b0f5051cd",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a832c01b-8146-424e-950a-b26a37b88414",
+			"name": "get_accepted_items",
+			"url": "{{url}}/finance/Payment/",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "d2e0f526-10d5-41cf-9c31-0f25882b81cc",
+			"responses": [
+				{
+					"id": "97cde7df-700a-40de-917a-0ed98a977137",
+					"name": "get_accepted_items",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "[\n    {\n        \"item\": {\n            \"name\": \"من پیش از تو\",\n            \"brand\": \"-\",\n            \"category\": \"Educational\",\n            \"price\": 20\n        },\n        \"quantity\": 1\n    }\n]",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": null,
+						"dataMode": null,
+						"dataOptions": null,
+						"headerData": [],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/finance/Payment/"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 13:24:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "104"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "a832c01b-8146-424e-950a-b26a37b88414",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "b988c19e-a51a-4f6d-b080-492169ef89d5",
+			"name": "get_list_of_orders",
+			"url": "{{url}}/finance/MyOrders/",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "d2e0f526-10d5-41cf-9c31-0f25882b81cc",
+			"responses": [
+				{
+					"id": "29e7e911-b6d8-485f-a0b9-42eb4aa934c9",
+					"name": "get_list_of_orders",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "[\n    {\n        \"detail\": \"http://online-shop-web-mapsabootcamp.fandogh.cloud/finance/MyOrders/3/\"\n    },\n    {\n        \"detail\": \"http://online-shop-web-mapsabootcamp.fandogh.cloud/finance/MyOrders/4/\"\n    }\n]",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": null,
+						"dataMode": null,
+						"dataOptions": null,
+						"headerData": [],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/finance/MyOrders/"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 13:11:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "169"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "b988c19e-a51a-4f6d-b080-492169ef89d5",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "c0ade723-364d-4934-96ec-29d4aec12bb5",
+			"name": "get_specific_orders",
+			"url": "{{url}}/finance/MyOrders/3/",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "d2e0f526-10d5-41cf-9c31-0f25882b81cc",
+			"responses": [
+				{
+					"id": "db0b08b9-294f-4313-93cd-581853c48539",
+					"name": "get_specific_orders",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"item\": {\n        \"name\": \"من پیش از تو\",\n        \"brand\": \"-\",\n        \"category\": \"Educational\",\n        \"price\": 20\n    },\n    \"quantity\": 1,\n    \"id\": 3\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": null,
+						"dataMode": null,
+						"dataOptions": null,
+						"headerData": [],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/finance/MyOrders/3/"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 13:12:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "c0ade723-364d-4934-96ec-29d4aec12bb5",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				},
+				{
+					"id": "dccf84fa-8706-4e4e-a40f-1f7b51741eef",
+					"name": "get_specific_orders",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"item\": {\n        \"name\": \"من پیش از تو\",\n        \"brand\": \"-\",\n        \"category\": \"Educational\",\n        \"price\": 20\n    },\n    \"quantity\": 1,\n    \"id\": 3\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": null,
+						"dataMode": null,
+						"dataOptions": null,
+						"headerData": [],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/finance/MyOrders/3/"
+					},
+					"headers": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Mar 2021 13:12:43 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Origin"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookies": null,
+					"request": "c0ade723-364d-4934-96ec-29d4aec12bb5",
+					"collection": "1bf84ec7-9224-40cc-a451-505a6fcbdb52"
+				}
+			],
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
